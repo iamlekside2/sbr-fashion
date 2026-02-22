@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import { supabase } from '../lib/supabase'
+import { notifyRuth } from '../lib/notifyRuth'
 import toast from 'react-hot-toast'
 import { ChevronRight, ChevronLeft, Check, Scissors, Palette, Ruler, User, Sparkles } from 'lucide-react'
 
@@ -15,30 +16,30 @@ const fadeUp = {
 
 /* ── STEP DATA ── */
 const GARMENTS = [
-  { id: 'dress', emoji: '👗', label: 'Dress / Gown', desc: 'Elegant dresses, evening gowns, and midi styles' },
-  { id: 'suit', emoji: '🤵', label: 'Suit / Two-Piece', desc: 'Tailored suits, senator styles, and matching sets' },
-  { id: 'agbada', emoji: '👑', label: 'Agbada / Kaftan', desc: 'Grand Agbada, flowing kaftans, and traditional robes' },
-  { id: 'blouse-skirt', emoji: '✨', label: 'Blouse & Skirt', desc: 'Peplum blouses, iro and buba, skirt combinations' },
-  { id: 'jumpsuit', emoji: '💫', label: 'Jumpsuit / Playsuit', desc: 'Chic jumpsuits and modern playsuits' },
-  { id: 'bridal', emoji: '💍', label: 'Bridal Outfit', desc: 'Wedding dresses, engagement outfits, aso-oke sets' },
+  { id: 'dress', image: 'https://images.unsplash.com/photo-1590735213920-68192a487bc2?w=300&h=200&fit=crop', label: 'Dress / Gown', desc: 'Elegant dresses, evening gowns, and midi styles' },
+  { id: 'suit', image: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=300&h=200&fit=crop', label: 'Suit / Two-Piece', desc: 'Tailored suits, senator styles, and matching sets' },
+  { id: 'agbada', image: 'https://images.unsplash.com/photo-1523264653568-69f0e8031ec2?w=300&h=200&fit=crop', label: 'Agbada / Kaftan', desc: 'Grand Agbada, flowing kaftans, and traditional robes' },
+  { id: 'blouse-skirt', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=300&h=200&fit=crop', label: 'Blouse & Skirt', desc: 'Peplum blouses, iro and buba, skirt combinations' },
+  { id: 'jumpsuit', image: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=300&h=200&fit=crop', label: 'Jumpsuit / Playsuit', desc: 'Chic jumpsuits and modern playsuits' },
+  { id: 'bridal', image: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=300&h=200&fit=crop', label: 'Bridal Outfit', desc: 'Wedding dresses, engagement outfits, aso-oke sets' },
 ]
 
 const STYLES = [
-  { id: 'modern', emoji: '🌟', label: 'Modern & Contemporary', desc: 'Clean lines, modern cuts, minimal embellishments' },
-  { id: 'traditional', emoji: '🌺', label: 'Traditional African', desc: 'Classic Nigerian silhouettes, cultural richness' },
-  { id: 'fusion', emoji: '🎨', label: 'Afro-Fusion', desc: 'Blending African heritage with global fashion trends' },
-  { id: 'glamour', emoji: '💎', label: 'Full Glamour', desc: 'Heavy embellishments, beadwork, stones, luxe finish' },
-  { id: 'minimalist', emoji: '🕊️', label: 'Elegant Minimalist', desc: 'Understated luxury, quality over ornamentation' },
+  { id: 'modern', image: 'https://images.unsplash.com/photo-1509631179647-0177331693ae?w=300&h=200&fit=crop', label: 'Modern & Contemporary', desc: 'Clean lines, modern cuts, minimal embellishments' },
+  { id: 'traditional', image: 'https://images.unsplash.com/photo-1523264653568-69f0e8031ec2?w=300&h=200&fit=crop', label: 'Traditional African', desc: 'Classic Nigerian silhouettes, cultural richness' },
+  { id: 'fusion', image: 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=300&h=200&fit=crop', label: 'Afro-Fusion', desc: 'Blending African heritage with global fashion trends' },
+  { id: 'glamour', image: 'https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=300&h=200&fit=crop', label: 'Full Glamour', desc: 'Heavy embellishments, beadwork, stones, luxe finish' },
+  { id: 'minimalist', image: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=300&h=200&fit=crop', label: 'Elegant Minimalist', desc: 'Understated luxury, quality over ornamentation' },
 ]
 
 const FABRICS = [
-  { id: 'ankara', emoji: '🎭', label: 'Ankara Print', desc: 'Bold African wax prints in vibrant patterns', price: '₦45,000+' },
-  { id: 'aso-oke', emoji: '👑', label: 'Aso-Oke', desc: 'Hand-woven Yoruba prestige cloth', price: '₦85,000+' },
-  { id: 'lace', emoji: '✨', label: 'French / Swiss Lace', desc: 'Premium imported lace with intricate detailing', price: '₦70,000+' },
-  { id: 'silk', emoji: '🌙', label: 'Silk & Satin', desc: 'Luxurious silk and satin for a flowing finish', price: '₦60,000+' },
-  { id: 'brocade', emoji: '💫', label: 'Brocade / Jacquard', desc: 'Rich textured fabrics with woven patterns', price: '₦55,000+' },
-  { id: 'crepe', emoji: '🕊️', label: 'Crepe / Chiffon', desc: 'Lightweight, elegant draping fabrics', price: '₦50,000+' },
-  { id: 'own-fabric', emoji: '📦', label: 'I Have My Own Fabric', desc: 'Send us your fabric and we\'ll craft the outfit', price: 'Sewing only' },
+  { id: 'ankara', image: 'https://images.unsplash.com/photo-1590735213920-68192a487bc2?w=300&h=200&fit=crop', label: 'Ankara Print', desc: 'Bold African wax prints in vibrant patterns', price: '₦45,000+' },
+  { id: 'aso-oke', image: 'https://images.unsplash.com/photo-1558171813-4c088753af8f?w=300&h=200&fit=crop', label: 'Aso-Oke', desc: 'Hand-woven Yoruba prestige cloth', price: '₦85,000+' },
+  { id: 'lace', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=300&h=200&fit=crop', label: 'French / Swiss Lace', desc: 'Premium imported lace with intricate detailing', price: '₦70,000+' },
+  { id: 'silk', image: 'https://images.unsplash.com/photo-1509631179647-0177331693ae?w=300&h=200&fit=crop', label: 'Silk & Satin', desc: 'Luxurious silk and satin for a flowing finish', price: '₦60,000+' },
+  { id: 'brocade', image: 'https://images.unsplash.com/photo-1523264653568-69f0e8031ec2?w=300&h=200&fit=crop', label: 'Brocade / Jacquard', desc: 'Rich textured fabrics with woven patterns', price: '₦55,000+' },
+  { id: 'crepe', image: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=300&h=200&fit=crop', label: 'Crepe / Chiffon', desc: 'Lightweight, elegant draping fabrics', price: '₦50,000+' },
+  { id: 'own-fabric', image: 'https://images.unsplash.com/photo-1611085583191-a3b181a88401?w=300&h=200&fit=crop', label: 'I Have My Own Fabric', desc: 'Send us your fabric and we\'ll craft the outfit', price: 'Sewing only' },
 ]
 
 const OCCASIONS = [
@@ -124,6 +125,7 @@ export default function BespokeConfigurator() {
     } else {
       setDone(true)
       toast.success('Your bespoke order has been submitted!')
+      notifyRuth('booking', { first_name: config.name, whatsapp: config.whatsapp, service: `Custom-Made: ${config.garment} — ${config.style} in ${config.fabric}`, email: config.email, vision: config.notes })
     }
     setSaving(false)
   }
@@ -147,7 +149,7 @@ export default function BespokeConfigurator() {
                 <Check size={12} color="#0A0806" strokeWidth={3} />
               </div>
             )}
-            <div style={{ fontSize: 28, marginBottom: 10 }}>{item.emoji}</div>
+            <div style={{ width: '100%', height: 80, borderRadius: 4, overflow: 'hidden', marginBottom: 10 }}><img src={item.image} alt={item.label} style={{ width: '100%', height: '100%', objectFit: 'cover' }} /></div>
             <div style={{ fontFamily: 'Cormorant Garamond,serif', fontSize: 17, fontWeight: 400, color: active ? '#C9A84C' : '#F9F4EC', marginBottom: 4 }}>{item.label}</div>
             <div style={{ fontSize: 11, color: '#8A7A5A', lineHeight: 1.5 }}>{item.desc}</div>
             {showPrice && item.price && (

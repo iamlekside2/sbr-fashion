@@ -67,18 +67,18 @@ export default function Home() {
 
   // Fallback category cards shown when no featured products exist yet
   const collections = [
-    { emoji: "👗", name: "Ankara Ready-to-Wear", cat: "Signature Line", count: "From ₦45,000", pattern: "repeating-conic-gradient(#C9A84C22 0% 25%, transparent 0% 50%)", bg: "linear-gradient(135deg,#1A0F00,#2A1800)", href: "/collections?cat=ankara" },
-    { emoji: "✨", name: "Custom-Made Pieces", cat: "Made to Order", count: "Made to Order", pattern: "radial-gradient(circle at 50% 50%, #C9A84C22 2px, transparent 2px)", bg: "linear-gradient(135deg,#0F0A00,#1F1400)", href: "/collections?cat=bespoke" },
-    { emoji: "💍", name: "Jewellery & Pieces", cat: "Accessories", count: "From ₦12,000", pattern: "repeating-linear-gradient(60deg,#C9A84C11 0,#C9A84C11 1px,transparent 0,transparent 10px)", bg: "linear-gradient(135deg,#120800,#221200)", href: "/collections?cat=accessories" },
-    { emoji: "🌍", name: "African Heritage Edit", cat: "New Season", count: "From ₦65,000", pattern: "repeating-linear-gradient(45deg,#C9A84C11 0,#C9A84C11 1px,transparent 0,transparent 10px)", bg: "linear-gradient(135deg,#0A0A00,#1A1600)", href: "/collections?cat=heritage" },
-    { emoji: "👑", name: "Aso-Ebi Styles", cat: "Occasion Wear", count: "Group Orders Welcome", pattern: "radial-gradient(circle, #C9A84C11 1px, transparent 1px)", bg: "linear-gradient(135deg,#100800,#201000)", href: "/collections?cat=aso-ebi" },
+    { image: "https://images.unsplash.com/photo-1590735213920-68192a487bc2?w=800&h=600&fit=crop", name: "Ankara Ready-to-Wear", cat: "Signature Line", count: "From ₦45,000", pattern: "repeating-conic-gradient(#C9A84C22 0% 25%, transparent 0% 50%)", bg: "linear-gradient(135deg,#1A0F00,#2A1800)", href: "/collections?cat=ankara" },
+    { image: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&h=600&fit=crop", name: "Custom-Made Pieces", cat: "Made to Order", count: "Made to Order", pattern: "radial-gradient(circle at 50% 50%, #C9A84C22 2px, transparent 2px)", bg: "linear-gradient(135deg,#0F0A00,#1F1400)", href: "/collections?cat=bespoke" },
+    { image: "https://images.unsplash.com/photo-1611085583191-a3b181a88401?w=800&h=600&fit=crop", name: "Jewellery & Pieces", cat: "Accessories", count: "From ₦12,000", pattern: "repeating-linear-gradient(60deg,#C9A84C11 0,#C9A84C11 1px,transparent 0,transparent 10px)", bg: "linear-gradient(135deg,#120800,#221200)", href: "/collections?cat=accessories" },
+    { image: "https://images.unsplash.com/photo-1523264653568-69f0e8031ec2?w=800&h=600&fit=crop", name: "African Heritage Edit", cat: "New Season", count: "From ₦65,000", pattern: "repeating-linear-gradient(45deg,#C9A84C11 0,#C9A84C11 1px,transparent 0,transparent 10px)", bg: "linear-gradient(135deg,#0A0A00,#1A1600)", href: "/collections?cat=heritage" },
+    { image: "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=800&h=600&fit=crop", name: "Aso-Ebi Styles", cat: "Occasion Wear", count: "Group Orders Welcome", pattern: "radial-gradient(circle, #C9A84C11 1px, transparent 1px)", bg: "linear-gradient(135deg,#100800,#201000)", href: "/collections?cat=aso-ebi" },
   ];
 
   const services = [
-    { emoji: "✂️", title: "Custom-Made Outfits", desc: "We'll make it exactly how you want it — your size, your style, your vision. Every stitch, just for you.", href: "/book" },
-    { emoji: "🎨", title: "Style Advice", desc: "Sit down with Ruth and figure out what works for your body, your lifestyle, and your budget.", href: "/book" },
-    { emoji: "🌺", title: "Ankara & Print Ready-to-Wear", desc: "Ready-made ankara and print pieces you can grab and go. Looking fresh has never been easier.", href: "/collections" },
-    { emoji: "💫", title: "Owambe & Aso-Ebi", desc: "Wedding, naming, birthday, or party — we'll make sure you and your crew show up correct.", href: "/book" },
+    { image: "https://images.unsplash.com/photo-1558171813-4c088753af8f?w=400&h=300&fit=crop", title: "Custom-Made Outfits", desc: "We'll make it exactly how you want it — your size, your style, your vision. Every stitch, just for you.", href: "/book" },
+    { image: "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=400&h=300&fit=crop", title: "Style Advice", desc: "Sit down with Ruth and figure out what works for your body, your lifestyle, and your budget.", href: "/book" },
+    { image: "https://images.unsplash.com/photo-1590735213920-68192a487bc2?w=400&h=300&fit=crop", title: "Ankara & Print Ready-to-Wear", desc: "Ready-made ankara and print pieces you can grab and go. Looking fresh has never been easier.", href: "/collections" },
+    { image: "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=400&h=300&fit=crop", title: "Owambe & Aso-Ebi", desc: "Wedding, naming, birthday, or party — we'll make sure you and your crew show up correct.", href: "/book" },
   ];
 
   const interactiveFeatures = [
@@ -244,7 +244,7 @@ export default function Home() {
             {collections.map((c, i) => (
               <Link key={c.name} to={c.href} style={{ textDecoration: "none", position: "relative", aspectRatio: i === 0 ? "auto" : "3/4", gridRow: i === 0 ? "span 2" : "auto", background: c.bg, overflow: "hidden", display: "block" }}>
                 <div style={{ position: "absolute", inset: 0, backgroundImage: c.pattern, backgroundSize: "20px 20px", opacity: 0.06 }} />
-                <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", fontSize: i === 0 ? 100 : 70 }}>{c.emoji}</div>
+                <img src={c.image} alt={c.name} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", opacity: 0.6 }} />
                 <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(10,8,6,0.95) 0%, rgba(10,8,6,0.2) 50%, transparent 100%)" }} />
                 <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, padding: 28 }}>
                   <div style={{ fontFamily: "Cinzel,serif", fontSize: 8, letterSpacing: "0.3em", textTransform: "uppercase", color: "#C9A84C", marginBottom: 6 }}>{c.cat}</div>
@@ -312,7 +312,7 @@ export default function Home() {
             <div key={sv.title} style={{ background: "#0A0806", padding: "48px 32px", transition: "background 0.3s" }}
               onMouseEnter={(e) => (e.currentTarget.style.background = "#1A1710")}
               onMouseLeave={(e) => (e.currentTarget.style.background = "#0A0806")}>
-              <div style={{ fontSize: 32, marginBottom: 24 }}>{sv.emoji}</div>
+              <div style={{ width: 60, height: 60, borderRadius: 8, overflow: "hidden", marginBottom: 24 }}><img src={sv.image} alt={sv.title} style={{ width: "100%", height: "100%", objectFit: "cover" }} /></div>
               <div style={{ fontFamily: "Cormorant Garamond,serif", fontSize: 22, fontWeight: 400, color: "#F9F4EC", marginBottom: 12 }}>{sv.title}</div>
               <p style={{ fontSize: 13, color: "#8A7A5A", lineHeight: 1.8, marginBottom: 24 }}>{sv.desc}</p>
               <Link to={sv.href} style={{ fontFamily: "Cinzel,serif", fontSize: 8, letterSpacing: "0.2em", textTransform: "uppercase", color: "#C9A84C", textDecoration: "none" }}>Find Out More →</Link>
@@ -420,7 +420,7 @@ export default function Home() {
             onMouseEnter={e => { e.currentTarget.style.borderColor = "rgba(201,168,76,0.4)" }}
             onMouseLeave={e => { e.currentTarget.style.borderColor = "rgba(201,168,76,0.15)" }}>
             <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-              <div style={{ fontSize: 28 }}>✨</div>
+              <Sparkles size={28} color="#C9A84C" />
               <div>
                 <div style={{ fontFamily: "Cormorant Garamond,serif", fontSize: 20, fontWeight: 400, color: "#F9F4EC", marginBottom: 4 }}>Client Spotlight</div>
                 <div style={{ fontSize: 13, color: "#8A7A5A" }}>See real clients rocking their SBR outfits — get inspired for your own.</div>

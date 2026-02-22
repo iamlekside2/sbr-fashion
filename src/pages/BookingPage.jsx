@@ -1,6 +1,7 @@
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import { supabase } from '../lib/supabase'
+import { notifyRuth } from '../lib/notifyRuth'
 import { useState } from 'react'
 import toast from 'react-hot-toast'
 
@@ -17,7 +18,7 @@ export default function BookingPage() {
     setSaving(true)
     const { error } = await supabase.from('bookings').insert({ ...form, status: 'pending' })
     if (error) toast.error('Something went wrong. Please try again.')
-    else { toast.success('Request sent! We\'ll reach out to you within 24 hours.'); setForm({ first_name:'', last_name:'', whatsapp:'', email:'', service:'', preferred_date:'', budget_range:'', vision:'' }) }
+    else { toast.success('Request sent! We\'ll reach out to you within 24 hours.'); notifyRuth('booking', form); setForm({ first_name:'', last_name:'', whatsapp:'', email:'', service:'', preferred_date:'', budget_range:'', vision:'' }) }
     setSaving(false)
   }
 

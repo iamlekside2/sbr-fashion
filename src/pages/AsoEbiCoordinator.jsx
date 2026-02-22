@@ -4,6 +4,7 @@ import { ChevronRight, ChevronLeft, Check, Users, Palette, Calendar, Ruler, Send
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import { supabase } from '../lib/supabase'
+import { notifyRuth } from '../lib/notifyRuth'
 import toast from 'react-hot-toast'
 
 const fadeUp = {
@@ -13,14 +14,14 @@ const fadeUp = {
 }
 
 const EVENT_TYPES = [
-  { id: 'wedding', emoji: '💍', label: 'Wedding' },
-  { id: 'engagement', emoji: '💐', label: 'Engagement / Introduction' },
-  { id: 'naming', emoji: '👶', label: 'Naming Ceremony' },
-  { id: 'birthday', emoji: '🎂', label: 'Birthday Celebration' },
-  { id: 'funeral', emoji: '🕊️', label: 'Funeral / Remembrance' },
-  { id: 'reunion', emoji: '👨‍👩‍👧‍👦', label: 'Family Reunion' },
-  { id: 'church', emoji: '⛪', label: 'Church / Group Event' },
-  { id: 'other', emoji: '✨', label: 'Other Event' },
+  { id: 'wedding', image: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=120&h=120&fit=crop', label: 'Wedding' },
+  { id: 'engagement', image: 'https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?w=120&h=120&fit=crop', label: 'Engagement / Introduction' },
+  { id: 'naming', image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=120&h=120&fit=crop', label: 'Naming Ceremony' },
+  { id: 'birthday', image: 'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=120&h=120&fit=crop', label: 'Birthday Celebration' },
+  { id: 'funeral', image: 'https://images.unsplash.com/photo-1490750967868-88aa4f44baee?w=120&h=120&fit=crop', label: 'Funeral / Remembrance' },
+  { id: 'reunion', image: 'https://images.unsplash.com/photo-1511895426328-dc8714191300?w=120&h=120&fit=crop', label: 'Family Reunion' },
+  { id: 'church', image: 'https://images.unsplash.com/photo-1438232992991-995b7058bbb3?w=120&h=120&fit=crop', label: 'Church / Group Event' },
+  { id: 'other', image: 'https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=120&h=120&fit=crop', label: 'Other Event' },
 ]
 
 const FABRIC_OPTIONS = [
@@ -138,6 +139,7 @@ export default function AsoEbiCoordinator() {
       if (error) throw error
       setDone(true)
       toast.success('Your aso-ebi request is in! We\'ll be in touch soon.')
+      notifyRuth('booking', { first_name: form.coordinator_name, whatsapp: form.coordinator_whatsapp, service: `Aso-Ebi: ${form.event_type} — ${form.event_name || 'No name'}`, email: form.coordinator_email, vision: `${form.guest_count} guests, ${form.fabric_type} fabric, ${form.colour_palette} palette` })
     } catch (err) {
       toast.error('Failed to submit. Please try again.')
     }
@@ -199,7 +201,9 @@ export default function AsoEbiCoordinator() {
                     border: `1px solid ${form.event_type === ev.id ? '#C9A84C' : 'rgba(201,168,76,0.15)'}`,
                     padding: '16px 12px', cursor: 'pointer', textAlign: 'center', transition: 'all 0.2s',
                   }}>
-                  <div style={{ fontSize: 24, marginBottom: 6 }}>{ev.emoji}</div>
+                  <div style={{ width: 40, height: 40, borderRadius: 6, overflow: 'hidden', marginBottom: 6 }}>
+                    <img src={ev.image} alt={ev.label} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  </div>
                   <div style={{ fontSize: 11, color: form.event_type === ev.id ? '#C9A84C' : '#8A7A5A' }}>{ev.label}</div>
                 </button>
               ))}

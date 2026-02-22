@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { supabase } from '../../lib/supabase'
+import { addWatermark } from '../../lib/watermark'
 import toast from 'react-hot-toast'
 import { Save, RefreshCw, Upload, Trash2 } from 'lucide-react'
 
@@ -59,7 +60,8 @@ export default function AdminContent() {
     setUploading(true)
     const ext = file.name.split('.').pop()
     const path = `about/${Date.now()}-${Math.random().toString(36).slice(2)}.${ext}`
-    const { error, data } = await supabase.storage.from('sbr-media').upload(path, file, { cacheControl: '3600', upsert: false })
+    const watermarked = await addWatermark(file)
+    const { error, data } = await supabase.storage.from('sbr-media').upload(path, watermarked, { cacheControl: '3600', upsert: false })
     if (error) { toast.error('Upload failed'); setUploading(false); return }
     const { data: urlData } = supabase.storage.from('sbr-media').getPublicUrl(data.path)
     const photoUrl = urlData.publicUrl

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { supabase } from '../../lib/supabase'
+import { addWatermark } from '../../lib/watermark'
 import toast from 'react-hot-toast'
 import { Plus, Pencil, Trash2, Upload, X, Star } from 'lucide-react'
 
@@ -34,7 +35,8 @@ export default function AdminProducts() {
     for(const file of Array.from(files)) {
       const ext = file.name.split('.').pop()
       const path = `products/${Date.now()}-${Math.random().toString(36).slice(2)}.${ext}`
-      const { error, data } = await supabase.storage.from('sbr-media').upload(path, file, { cacheControl:'3600', upsert:false })
+      const watermarked = await addWatermark(file)
+      const { error, data } = await supabase.storage.from('sbr-media').upload(path, watermarked, { cacheControl:'3600', upsert:false })
       if(!error && data) {
         const { data: urlData } = supabase.storage.from('sbr-media').getPublicUrl(data.path)
         setImages(prev => [...prev, urlData.publicUrl])

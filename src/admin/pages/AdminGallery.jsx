@@ -1,5 +1,6 @@
 import { useEffect, useState, useCallback } from 'react'
 import { supabase } from '../../lib/supabase'
+import { addWatermark } from '../../lib/watermark'
 import toast from 'react-hot-toast'
 import { Upload, Trash2, Star, X } from 'lucide-react'
 
@@ -46,7 +47,8 @@ export default function AdminGallery() {
     setUploading(true)
     const ext = pendingFile.name.split('.').pop()
     const path = `gallery/${Date.now()}.${ext}`
-    const { error, data } = await supabase.storage.from('sbr-media').upload(path, pendingFile)
+    const watermarked = await addWatermark(pendingFile)
+    const { error, data } = await supabase.storage.from('sbr-media').upload(path, watermarked)
     if (error) { toast.error('Upload failed'); setUploading(false); return }
     const { data: urlData } = supabase.storage.from('sbr-media').getPublicUrl(data.path)
     await supabase.from('gallery').insert({ title: form.title, category: form.category, image_url: urlData.publicUrl, featured: false })

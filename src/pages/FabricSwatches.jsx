@@ -4,6 +4,7 @@ import { Send, X, Palette, Search, MessageCircle } from 'lucide-react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import { supabase } from '../lib/supabase'
+import { notifyRuth } from '../lib/notifyRuth'
 import toast from 'react-hot-toast'
 
 const fadeUp = {
@@ -105,6 +106,7 @@ export default function FabricSwatches() {
       }])
       if (error) throw error
       toast.success('Request sent! We\'ll be in touch soon with your samples.')
+      notifyRuth('message', { name: form.name, whatsapp: form.whatsapp, email: form.email, subject: 'Fabric Swatch Request', message: `Swatches: ${requestItems.map(s => s.name).join(', ')}` })
       setRequestOpen(false)
       setRequestItems([])
       setForm({ name: '', email: '', whatsapp: '', notes: '' })

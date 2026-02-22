@@ -76,7 +76,7 @@ export default function Collections() {
                         onMouseEnter={e => (e.currentTarget.style.transform = 'scale(1.05)')}
                         onMouseLeave={e => (e.currentTarget.style.transform = 'scale(1)')} />
                     ) : (
-                      <div style={{ fontSize: 64, opacity: 0.2 }}>👗</div>
+                      <div style={{ fontFamily: 'Cormorant Garamond,serif', fontSize: 48, color: '#C9A84C', opacity: 0.2 }}>SBR</div>
                     )}
                   </div>
                   <div style={{ padding: '20px 20px 24px' }}>

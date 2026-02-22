@@ -15,22 +15,22 @@ const stagger = { show: { transition: { staggerChildren: 0.12 } } }
 
 const TIERS = [
   {
-    id: 'bronze', icon: Star, label: 'Bronze', emoji: '🌟',
+    id: 'bronze', icon: Star, label: 'Bronze',
     threshold: '₦0 - ₦99,999', colour: '#CD7F32',
     perks: ['A welcome gift with your first order', '5% off your second purchase', 'Early access to new collections', 'Birthday treat (10% off!)'],
   },
   {
-    id: 'silver', icon: Sparkles, label: 'Silver', emoji: '✨',
+    id: 'silver', icon: Sparkles, label: 'Silver',
     threshold: '₦100,000 - ₦299,999', colour: '#C0C0C0',
     perks: ['All Bronze perks', '10% off all orders', 'Priority booking when you chat with us', 'Free basic alterations', 'Exclusive seasonal previews'],
   },
   {
-    id: 'gold', icon: Crown, label: 'Gold', emoji: '👑',
+    id: 'gold', icon: Crown, label: 'Gold',
     threshold: '₦300,000 - ₦599,999', colour: '#C9A84C',
     perks: ['All Silver perks', '15% off all orders', 'Free styling chat with Ruth', 'Free delivery within Lagos', 'VIP event invitations', 'Anniversary gift from us to you'],
   },
   {
-    id: 'platinum', icon: Gem, label: 'Platinum', emoji: '💎',
+    id: 'platinum', icon: Gem, label: 'Platinum',
     threshold: '₦600,000+', colour: '#E5E4E2',
     perks: ['All Gold perks', '20% off all orders', 'Your own personal stylist', 'Free delivery nationwide', 'First access to limited editions', 'A complimentary outfit every year!', 'Private shopping experience'],
   },
@@ -80,7 +80,7 @@ export default function LoyaltyProgramme() {
         message: `New loyalty programme registration:\nName: ${form.name}\nEmail: ${form.email}\nWhatsApp: ${form.whatsapp}`,
       }])
       if (error) throw error
-      toast.success('Welcome to the SBR Loyalty Programme! 🎉')
+      toast.success('Welcome to the SBR Loyalty Programme!')
       setShowJoin(false)
       setForm({ name: '', email: '', whatsapp: '' })
     } catch (err) {
@@ -98,7 +98,7 @@ export default function LoyaltyProgramme() {
           {/* ── HERO ── */}
           <motion.div initial="hidden" animate="show" variants={stagger}
             style={{ textAlign: 'center', marginBottom: 80 }}>
-            <motion.div variants={fadeUp} style={{ fontSize: 48, marginBottom: 12 }}>👑</motion.div>
+            <motion.div variants={fadeUp} style={{ marginBottom: 12 }}><Crown size={48} color="#C9A84C" strokeWidth={1.5} /></motion.div>
             <motion.div variants={fadeUp} style={{ fontFamily: 'Cinzel,serif', fontSize: 9, letterSpacing: '0.4em', textTransform: 'uppercase', color: '#C9A84C', marginBottom: 16 }}>
               Exclusive Rewards
             </motion.div>

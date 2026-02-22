@@ -143,7 +143,7 @@ export default function CollectionDetail() {
                 </div>
               ) : (
                 <div style={{ aspectRatio: '3/4', background: '#1A1710', border: '1px solid rgba(201,168,76,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <div style={{ fontSize: 80, opacity: 0.15 }}>👗</div>
+                  <div style={{ fontFamily: 'Cormorant Garamond,serif', fontSize: 64, color: '#C9A84C', opacity: 0.2 }}>SBR</div>
                 </div>
               )}
             </motion.div>
@@ -238,7 +238,7 @@ export default function CollectionDetail() {
                           onMouseEnter={e => (e.currentTarget.style.transform = 'scale(1.05)')}
                           onMouseLeave={e => (e.currentTarget.style.transform = 'scale(1)')} />
                       ) : (
-                        <div style={{ fontSize: 48, opacity: 0.15 }}>👗</div>
+                        <div style={{ fontFamily: 'Cormorant Garamond,serif', fontSize: 36, color: '#C9A84C', opacity: 0.2 }}>SBR</div>
                       )}
                     </div>
                     <div style={{ padding: '16px 18px 20px' }}>

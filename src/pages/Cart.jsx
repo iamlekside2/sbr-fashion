@@ -8,6 +8,7 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import { useCart } from '../context/CartContext'
 import { supabase } from '../lib/supabase'
+import { notifyRuth } from '../lib/notifyRuth'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -102,6 +103,7 @@ export default function Cart() {
       toast.error('Could not save order. Please contact us on WhatsApp.')
       return null
     }
+    notifyRuth('order', { ...orderData, item_count: items.length })
     return orderNumber
   }
 
@@ -216,7 +218,7 @@ export default function Cart() {
                           {item.image ? (
                             <img src={item.image} alt={item.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                           ) : (
-                            <div style={{ fontSize: 32, opacity: 0.15 }}>👗</div>
+                            <div style={{ fontFamily: 'Cormorant Garamond,serif', fontSize: 24, color: '#C9A84C', opacity: 0.2 }}>SBR</div>
                           )}
                         </Link>
                         <div>

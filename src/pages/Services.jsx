@@ -3,11 +3,11 @@ import Footer from '../components/Footer'
 
 export default function Services() {
   const services = [
-    { emoji: '✂️', title: 'Custom-Made Outfits', desc: 'This is what we do best. Every custom outfit starts with a real conversation — we learn your style, your body, what you love. Then we design it, pick the fabric together, and sew every detail to your exact measurements.', price: 'From ₦80,000', time: '3–6 weeks' },
-    { emoji: '🎨', title: 'Style Advice Session', desc: 'Sit down with Ruth one-on-one. We\'ll go through your wardrobe, figure out what works for you, and create a plan — whether it\'s for a big event, work, or just looking your best every day.', price: 'From ₦25,000', time: '2–3 hours' },
-    { emoji: '🌺', title: 'Ankara & Print Pieces', desc: 'Ready-to-wear ankara and print pieces designed right here in our Lagos studio. Quality fabrics, beautiful designs, and available from XS to 5XL.', price: 'From ₦45,000', time: 'Ready to ship' },
-    { emoji: '💫', title: 'Owambe & Aso-Ebi', desc: 'From wedding outfits to full Aso-Ebi coordination for your squad — we make sure everyone shows up looking amazing. We handle the fabric, the design, and the sewing for any group size.', price: 'From ₦60,000/person', time: '2–4 weeks' },
-    { emoji: '💍', title: 'Accessories', desc: 'The finishing touches that bring everything together. Statement jewellery, custom bags, headpieces, and belts — handpicked to match your outfit perfectly.', price: 'From ₦12,000', time: 'In stock' },
+    { image: 'https://images.unsplash.com/photo-1558171813-4c088753af8f?w=400&h=400&fit=crop', title: 'Custom-Made Outfits', desc: 'This is what we do best. Every custom outfit starts with a real conversation — we learn your style, your body, what you love. Then we design it, pick the fabric together, and sew every detail to your exact measurements.', price: 'From ₦80,000', time: '3–6 weeks' },
+    { image: 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=400&h=400&fit=crop', title: 'Style Advice Session', desc: 'Sit down with Ruth one-on-one. We\'ll go through your wardrobe, figure out what works for you, and create a plan — whether it\'s for a big event, work, or just looking your best every day.', price: 'From ₦25,000', time: '2–3 hours' },
+    { image: 'https://images.unsplash.com/photo-1590735213920-68192a487bc2?w=400&h=400&fit=crop', title: 'Ankara & Print Pieces', desc: 'Ready-to-wear ankara and print pieces designed right here in our Lagos studio. Quality fabrics, beautiful designs, and available from XS to 5XL.', price: 'From ₦45,000', time: 'Ready to ship' },
+    { image: 'https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=400&h=400&fit=crop', title: 'Owambe & Aso-Ebi', desc: 'From wedding outfits to full Aso-Ebi coordination for your squad — we make sure everyone shows up looking amazing. We handle the fabric, the design, and the sewing for any group size.', price: 'From ₦60,000/person', time: '2–4 weeks' },
+    { image: 'https://images.unsplash.com/photo-1611085583191-a3b181a88401?w=400&h=400&fit=crop', title: 'Accessories', desc: 'The finishing touches that bring everything together. Statement jewellery, custom bags, headpieces, and belts — handpicked to match your outfit perfectly.', price: 'From ₦12,000', time: 'In stock' },
   ]
 
   return (
@@ -24,7 +24,7 @@ export default function Services() {
           <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
             {services.map(sv => (
               <div key={sv.title} className="sbr-service-row" style={{ display: 'grid', gridTemplateColumns: '80px 1fr auto', gap: 40, padding: '48px 0', borderBottom: '1px solid rgba(201,168,76,0.1)', alignItems: 'start' }}>
-                <div style={{ fontSize: 40 }}>{sv.emoji}</div>
+                <div style={{ width: 64, height: 64, borderRadius: 8, overflow: 'hidden' }}><img src={sv.image} alt={sv.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} /></div>
                 <div>
                   <div style={{ fontFamily: 'Cormorant Garamond,serif', fontSize: 28, fontWeight: 400, color: '#F9F4EC', marginBottom: 12 }}>{sv.title}</div>
                   <p style={{ fontSize: 14, color: '#8A7A5A', lineHeight: 1.9, maxWidth: 600 }}>{sv.desc}</p>

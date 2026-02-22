@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import { supabase } from '../lib/supabase'
+import { notifyRuth } from '../lib/notifyRuth'
 import toast from 'react-hot-toast'
 import { MapPin, Phone, Instagram, Mail, Send } from 'lucide-react'
 
@@ -36,7 +37,7 @@ export default function Contact() {
     setSaving(true)
     const { error } = await supabase.from('messages').insert({ name: form.name, email: form.email, whatsapp: form.whatsapp, subject: form.subject, message: form.message, read: false })
     if (error) toast.error('Something went wrong. Please try again.')
-    else { toast.success('Message sent! We\'ll get back to you soon.'); setForm({ name:'', email:'', whatsapp:'', subject:'General Question', message:'' }) }
+    else { toast.success('Message sent! We\'ll get back to you soon.'); notifyRuth('message', form); setForm({ name:'', email:'', whatsapp:'', subject:'General Question', message:'' }) }
     setSaving(false)
   }
 
