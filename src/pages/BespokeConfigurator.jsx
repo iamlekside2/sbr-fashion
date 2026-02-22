@@ -167,9 +167,9 @@ export default function BespokeConfigurator() {
           <motion.div key="step0" variants={fadeUp} initial="hidden" animate="show" exit="exit">
             <div style={{ marginBottom: 32 }}>
               <h2 style={{ fontFamily: 'Cormorant Garamond,serif', fontSize: 'clamp(28px,3vw,40px)', fontWeight: 300, color: '#F9F4EC', marginBottom: 8 }}>
-                What would you like us to <em style={{ fontStyle: 'italic', color: '#C9A84C' }}>create?</em>
+                What are we making <em style={{ fontStyle: 'italic', color: '#C9A84C' }}>for you?</em>
               </h2>
-              <p style={{ fontSize: 14, color: '#8A7A5A' }}>Select the type of garment you envision.</p>
+              <p style={{ fontSize: 14, color: '#8A7A5A' }}>Pick the type of outfit you want.</p>
             </div>
             <CardPicker items={GARMENTS} selected={config.garment} onSelect={v => set('garment', v)} />
           </motion.div>
@@ -180,9 +180,9 @@ export default function BespokeConfigurator() {
           <motion.div key="step1" variants={fadeUp} initial="hidden" animate="show" exit="exit">
             <div style={{ marginBottom: 32 }}>
               <h2 style={{ fontFamily: 'Cormorant Garamond,serif', fontSize: 'clamp(28px,3vw,40px)', fontWeight: 300, color: '#F9F4EC', marginBottom: 8 }}>
-                Choose your <em style={{ fontStyle: 'italic', color: '#C9A84C' }}>aesthetic</em>
+                What's your <em style={{ fontStyle: 'italic', color: '#C9A84C' }}>style?</em>
               </h2>
-              <p style={{ fontSize: 14, color: '#8A7A5A' }}>What style resonates with your vision?</p>
+              <p style={{ fontSize: 14, color: '#8A7A5A' }}>Which vibe matches what you're going for?</p>
             </div>
             <CardPicker items={STYLES} selected={config.style} onSelect={v => set('style', v)} />
           </motion.div>
@@ -193,9 +193,9 @@ export default function BespokeConfigurator() {
           <motion.div key="step2" variants={fadeUp} initial="hidden" animate="show" exit="exit">
             <div style={{ marginBottom: 32 }}>
               <h2 style={{ fontFamily: 'Cormorant Garamond,serif', fontSize: 'clamp(28px,3vw,40px)', fontWeight: 300, color: '#F9F4EC', marginBottom: 8 }}>
-                Select your <em style={{ fontStyle: 'italic', color: '#C9A84C' }}>fabric</em>
+                Pick your <em style={{ fontStyle: 'italic', color: '#C9A84C' }}>fabric</em>
               </h2>
-              <p style={{ fontSize: 14, color: '#8A7A5A' }}>Pick a base fabric — we'll refine the exact choice during consultation.</p>
+              <p style={{ fontSize: 14, color: '#8A7A5A' }}>Choose a fabric type — we'll pick the perfect one together when we chat.</p>
             </div>
             <CardPicker items={FABRICS} selected={config.fabric} onSelect={v => set('fabric', v)} showPrice />
           </motion.div>
@@ -206,9 +206,9 @@ export default function BespokeConfigurator() {
           <motion.div key="step3" variants={fadeUp} initial="hidden" animate="show" exit="exit">
             <div style={{ marginBottom: 32 }}>
               <h2 style={{ fontFamily: 'Cormorant Garamond,serif', fontSize: 'clamp(28px,3vw,40px)', fontWeight: 300, color: '#F9F4EC', marginBottom: 8 }}>
-                Tell us the <em style={{ fontStyle: 'italic', color: '#C9A84C' }}>details</em>
+                Give us the <em style={{ fontStyle: 'italic', color: '#C9A84C' }}>details</em>
               </h2>
-              <p style={{ fontSize: 14, color: '#8A7A5A' }}>Help us understand the occasion and your measurements.</p>
+              <p style={{ fontSize: 14, color: '#8A7A5A' }}>What's the occasion? And if you know your measurements, even better.</p>
             </div>
 
             {/* Occasion */}
@@ -268,9 +268,9 @@ export default function BespokeConfigurator() {
 
             {/* Special Notes */}
             <div>
-              <label style={labelStyle}>Additional Notes / Inspiration</label>
+              <label style={labelStyle}>Anything Else We Should Know?</label>
               <textarea style={{ ...inp, height: 90, resize: 'none' }} value={config.notes} onChange={e => set('notes', e.target.value)}
-                placeholder="Describe any specific details — sleeve style, neckline, embroidery ideas, colour preferences, or inspiration links..."
+                placeholder="Tell us everything — sleeve style, neckline, colour ideas, or share your Pinterest board..."
                 onFocus={e => (e.target.style.borderColor = '#C9A84C')} onBlur={e => (e.target.style.borderColor = 'rgba(201,168,76,0.2)')} />
             </div>
           </motion.div>
@@ -281,9 +281,9 @@ export default function BespokeConfigurator() {
           <motion.div key="step4" variants={fadeUp} initial="hidden" animate="show" exit="exit">
             <div style={{ marginBottom: 32 }}>
               <h2 style={{ fontFamily: 'Cormorant Garamond,serif', fontSize: 'clamp(28px,3vw,40px)', fontWeight: 300, color: '#F9F4EC', marginBottom: 8 }}>
-                Almost there — <em style={{ fontStyle: 'italic', color: '#C9A84C' }}>your details</em>
+                Last step — <em style={{ fontStyle: 'italic', color: '#C9A84C' }}>how do we reach you?</em>
               </h2>
-              <p style={{ fontSize: 14, color: '#8A7A5A' }}>How can we reach you to discuss your bespoke piece?</p>
+              <p style={{ fontSize: 14, color: '#8A7A5A' }}>Drop your details so we can chat about your outfit.</p>
             </div>
 
             <div className="sbr-form-row" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, marginBottom: 16 }}>
@@ -322,7 +322,7 @@ export default function BespokeConfigurator() {
 
             {/* Summary */}
             <div style={{ background: '#111009', border: '1px solid rgba(201,168,76,0.15)', padding: 24 }}>
-              <div style={{ fontFamily: 'Cinzel,serif', fontSize: 9, letterSpacing: '0.25em', textTransform: 'uppercase', color: '#C9A84C', marginBottom: 16 }}>Your Bespoke Order Summary</div>
+              <div style={{ fontFamily: 'Cinzel,serif', fontSize: 9, letterSpacing: '0.25em', textTransform: 'uppercase', color: '#C9A84C', marginBottom: 16 }}>Your Order Summary</div>
               {[
                 ['Garment', GARMENTS.find(g => g.id === config.garment)?.label],
                 ['Style', STYLES.find(s => s.id === config.style)?.label],
@@ -363,7 +363,7 @@ export default function BespokeConfigurator() {
               Order <em style={{ fontStyle: 'italic', color: '#C9A84C' }}>Received!</em>
             </h1>
             <p style={{ fontSize: 15, color: '#8A7A5A', lineHeight: 1.8, marginBottom: 40 }}>
-              Thank you, {config.name}! Your bespoke order has been submitted successfully. Our team will review your preferences and reach out within 24 hours to schedule a consultation.
+              Thank you, {config.name}! Your order has been submitted! Our team will go through everything and reach out within 24 hours to set up a chat.
             </p>
             <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
               <a href={`https://wa.me/${waNumber}?text=${waText}`} target="_blank" rel="noreferrer"
@@ -375,7 +375,7 @@ export default function BespokeConfigurator() {
                 style={{ fontFamily: 'Cinzel,serif', fontSize: 10, fontWeight: 600, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#C9A84C', border: '1px solid rgba(201,168,76,0.4)', padding: '16px 32px', textDecoration: 'none', transition: 'all 0.2s' }}
                 onMouseEnter={e => { e.currentTarget.style.background = 'rgba(201,168,76,0.1)'; e.currentTarget.style.borderColor = '#C9A84C' }}
                 onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.borderColor = 'rgba(201,168,76,0.4)' }}>
-                Explore Collections
+                See Our Collection
               </Link>
             </div>
           </motion.div>
@@ -394,11 +394,11 @@ export default function BespokeConfigurator() {
 
           {/* Header */}
           <div style={{ textAlign: 'center', marginBottom: 48 }}>
-            <div style={{ fontFamily: 'Cinzel,serif', fontSize: 9, letterSpacing: '0.4em', textTransform: 'uppercase', color: '#C9A84C', marginBottom: 16 }}>Design Your Dream Outfit</div>
+            <div style={{ fontFamily: 'Cinzel,serif', fontSize: 9, letterSpacing: '0.4em', textTransform: 'uppercase', color: '#C9A84C', marginBottom: 16 }}>Design Your Perfect Outfit</div>
             <h1 style={{ fontFamily: 'Cormorant Garamond,serif', fontSize: 'clamp(36px,5vw,60px)', fontWeight: 300, color: '#F9F4EC', marginBottom: 16 }}>
-              Bespoke <em style={{ fontStyle: 'italic', color: '#C9A84C' }}>Configurator</em>
+              Custom Outfit <em style={{ fontStyle: 'italic', color: '#C9A84C' }}>Builder</em>
             </h1>
-            <p style={{ fontFamily: 'Cormorant Garamond,serif', fontStyle: 'italic', fontSize: 16, color: '#8A7A5A' }}>Craft your vision in five simple steps.</p>
+            <p style={{ fontFamily: 'Cormorant Garamond,serif', fontStyle: 'italic', fontSize: 16, color: '#8A7A5A' }}>Build your dream outfit in five easy steps.</p>
           </div>
 
           {/* Progress Bar */}
@@ -473,7 +473,7 @@ export default function BespokeConfigurator() {
                 border: 'none', padding: '16px 32px',
                 cursor: canNext() && !saving ? 'pointer' : 'not-allowed', transition: 'all 0.2s',
               }}>
-                {saving ? 'Submitting...' : 'Submit Bespoke Order'} <Sparkles size={14} />
+                {saving ? 'Submitting...' : 'Submit Your Order'} <Sparkles size={14} />
               </button>
             )}
           </div>

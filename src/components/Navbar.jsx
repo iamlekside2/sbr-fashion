@@ -26,8 +26,8 @@ export default function Navbar() {
     { to: '/#about', label: 'About' },
     { to: '/collections', label: 'Collections' },
     { to: '/services', label: 'Services' },
-    { to: '/bespoke', label: 'Bespoke' },
-    { to: '/lookbook', label: 'Lookbook' },
+    { to: '/bespoke', label: 'Custom-Made' },
+    { to: '/lookbook', label: 'Our Work' },
     { to: '/style-quiz', label: 'Style Quiz' },
     { to: '/contact', label: 'Contact' },
     { to: '/book', label: 'Book' },
@@ -97,7 +97,7 @@ export default function Navbar() {
         }}
         onMouseEnter={e => (e.currentTarget.style.background='#E8C97A')}
         onMouseLeave={e => (e.currentTarget.style.background='#C9A84C')}>
-          Book Consultation
+          Let's Talk
         </Link>
 
         {/* Mobile hamburger */}
@@ -131,7 +131,7 @@ export default function Navbar() {
             color:'#0A0806', background:'linear-gradient(135deg,#E8C97A,#C9A84C)',
             padding:'16px 40px', textDecoration:'none', marginTop:16
           }}>
-            Book Consultation
+            Let's Talk
           </Link>
         </div>
       )}

@@ -11,9 +11,9 @@ import toast from 'react-hot-toast'
 // Animation variants available for future use
 
 const SLOTS = [
-  { id: 'main', label: 'Main Piece', desc: 'Dress, top, or primary garment', categories: ['ready-to-wear', 'bespoke', 'ankara'] },
-  { id: 'accent', label: 'Accent / Layer', desc: 'Jacket, wrapper, or complementary piece', categories: ['ready-to-wear', 'ankara'] },
-  { id: 'accessory', label: 'Accessories', desc: 'Jewellery, bags, headpieces', categories: ['accessories'] },
+  { id: 'main', label: 'Main Piece', desc: 'Your dress, top, or primary outfit', categories: ['ready-to-wear', 'bespoke', 'ankara'] },
+  { id: 'accent', label: 'Accent / Layer', desc: 'A jacket, wrapper, or something to complement', categories: ['ready-to-wear', 'ankara'] },
+  { id: 'accessory', label: 'Accessories', desc: 'Jewellery, bags, headpieces — the finishing touches', categories: ['accessories'] },
 ]
 
 const btn = {
@@ -104,7 +104,7 @@ export default function OutfitBuilder() {
               Outfit <em style={{ fontStyle: 'italic', color: '#C9A84C' }}>Builder</em>
             </h1>
             <p style={{ fontSize: 15, color: '#8A7A5A', maxWidth: 500, margin: '0 auto', lineHeight: 1.8 }}>
-              Create your perfect outfit by combining pieces from our collection. Pick a main piece, add layers, and top it off with accessories.
+              Put together your dream outfit by mixing pieces from our collection. Pick a main piece, add layers, and finish with accessories!
             </p>
           </div>
 
@@ -171,7 +171,7 @@ export default function OutfitBuilder() {
                 {outfitCount === 0 ? (
                   <div style={{ textAlign: 'center', padding: '24px 0' }}>
                     <Sparkles size={24} color="#8A7A5A" style={{ marginBottom: 12, opacity: 0.5 }} />
-                    <p style={{ fontSize: 13, color: '#8A7A5A', lineHeight: 1.6 }}>Start building your outfit by selecting pieces from each category.</p>
+                    <p style={{ fontSize: 13, color: '#8A7A5A', lineHeight: 1.6 }}>Start putting your outfit together by picking pieces from each category. Have fun with it!</p>
                   </div>
                 ) : (
                   <>

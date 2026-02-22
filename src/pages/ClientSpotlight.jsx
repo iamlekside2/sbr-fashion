@@ -61,12 +61,12 @@ export default function ClientSpotlight() {
 
           {/* Header */}
           <div style={{ textAlign: 'center', marginBottom: 60 }}>
-            <div style={labelStyle}>Real Clients, Real Style</div>
+            <div style={labelStyle}>Our Beautiful Clients</div>
             <h1 style={{ fontFamily: 'Cormorant Garamond,serif', fontSize: 'clamp(36px,5vw,56px)', fontWeight: 300, color: '#F9F4EC', margin: '16px 0 12px' }}>
               Client <em style={{ fontStyle: 'italic', color: '#C9A84C' }}>Spotlight</em>
             </h1>
             <p style={{ fontSize: 15, color: '#8A7A5A', maxWidth: 520, margin: '0 auto', lineHeight: 1.8 }}>
-              Celebrating the incredible women (and men) who wear Stitches by Ruthchinos with pride and confidence.
+              These are the amazing people who trust us to make them look and feel their absolute best. We love every single one of them!
             </p>
           </div>
 
@@ -128,15 +128,15 @@ export default function ClientSpotlight() {
 
           {/* CTA */}
           <div style={{ textAlign: 'center', marginTop: 60 }}>
-            <div style={{ ...labelStyle, marginBottom: 16 }}>Want to be Featured?</div>
-            <p style={{ fontSize: 14, color: '#8A7A5A', marginBottom: 24 }}>Share your SBR story with us on Instagram and tag @stitchesbyruthchinos</p>
+            <div style={{ ...labelStyle, marginBottom: 16 }}>Want to Be Our Next Star?</div>
+            <p style={{ fontSize: 14, color: '#8A7A5A', marginBottom: 24 }}>Share your SBR look on Instagram and tag @stitchesbyruthchinos — we'd love to feature you!</p>
             <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
               <Link to="/book" style={{
                 fontFamily: 'Cinzel,serif', fontSize: 9, letterSpacing: '0.2em', textTransform: 'uppercase',
                 background: 'linear-gradient(135deg, #C9A84C, #8B6914)', color: '#0A0806',
                 padding: '14px 32px', textDecoration: 'none',
               }}>
-                Book Your Outfit
+                Let's Make Yours
               </Link>
               <Link to="/collections" style={{
                 fontFamily: 'Cinzel,serif', fontSize: 9, letterSpacing: '0.2em', textTransform: 'uppercase',

@@ -13,8 +13,8 @@ import { useCart } from '../context/CartContext'
 const QUESTIONS = [
   {
     id: 'body',
-    title: 'How would you describe your body shape?',
-    subtitle: 'This helps us recommend the most flattering silhouettes.',
+    title: 'What\'s your body shape like?',
+    subtitle: 'This helps us find the most flattering styles for you.',
     options: [
       { id: 'hourglass', emoji: '⏳', label: 'Hourglass', desc: 'Balanced bust and hips with a defined waist' },
       { id: 'pear', emoji: '🍐', label: 'Pear', desc: 'Wider hips with a narrower upper body' },
@@ -25,7 +25,7 @@ const QUESTIONS = [
   },
   {
     id: 'vibe',
-    title: 'What\'s your everyday style vibe?',
+    title: 'How would you describe your style?',
     subtitle: 'Pick the one that feels most like you.',
     options: [
       { id: 'classic', emoji: '🕊️', label: 'Classic & Timeless', desc: 'Clean lines, neutral palettes, structured pieces' },
@@ -37,8 +37,8 @@ const QUESTIONS = [
   },
   {
     id: 'occasion',
-    title: 'What occasions do you dress for most often?',
-    subtitle: 'This shapes our outfit recommendations for your lifestyle.',
+    title: 'Where do you dress up for the most?',
+    subtitle: 'This helps us recommend pieces that fit your lifestyle.',
     options: [
       { id: 'owambe', emoji: '🎉', label: 'Owambe & Parties', desc: 'Weddings, birthdays, and social celebrations' },
       { id: 'corporate', emoji: '💼', label: 'Corporate & Work', desc: 'Office, meetings, and professional settings' },
@@ -49,8 +49,8 @@ const QUESTIONS = [
   },
   {
     id: 'colour',
-    title: 'Which colour family do you gravitate toward?',
-    subtitle: 'Your palette tells us a lot about your personality.',
+    title: 'What colours do you love wearing?',
+    subtitle: 'Your colour choices say a lot about your personality!',
     options: [
       { id: 'earth', emoji: '🌿', label: 'Earth Tones', desc: 'Browns, greens, terracotta, cream', colors: ['#8B6914','#2D5016','#CD6839','#EDE3D0'] },
       { id: 'jewel', emoji: '💎', label: 'Jewel Tones', desc: 'Emerald, sapphire, ruby, amethyst', colors: ['#046307','#1A237E','#9B111E','#6A0DAD'] },
@@ -61,8 +61,8 @@ const QUESTIONS = [
   },
   {
     id: 'fabric',
-    title: 'What fabric do you love wearing most?',
-    subtitle: 'The right fabric makes all the difference in how you feel.',
+    title: 'What fabric makes you feel your best?',
+    subtitle: 'The right fabric changes everything — trust us on this one!',
     options: [
       { id: 'ankara', emoji: '🎭', label: 'Ankara / African Print', desc: 'Bold, cultural, and statement-making' },
       { id: 'lace', emoji: '✨', label: 'Lace & Embroidery', desc: 'Delicate, feminine, and detailed' },
@@ -77,39 +77,39 @@ const QUESTIONS = [
 const PROFILES = {
   'The Regal Matriarch': {
     match: (a) => a.vibe === 'classic' && (a.fabric === 'aso-oke' || a.fabric === 'lace'),
-    emoji: '👑', description: 'You exude timeless elegance and cultural pride. Your style commands respect with traditional silhouettes elevated by premium fabrics and masterful tailoring.',
+    emoji: '👑', description: 'You carry yourself with timeless elegance and cultural pride. Your style commands respect — traditional silhouettes in premium fabrics, masterfully tailored. Absolute queen energy!',
     categories: ['bespoke', 'aso-ebi'],
-    tips: ['Invest in quality aso-oke pieces for your collection', 'A well-tailored iro and buba set is your power outfit', 'Layer with statement gele and elegant accessories'],
+    tips: ['Invest in quality aso-oke pieces — they never go out of style', 'A well-tailored iro and buba set is your ultimate power outfit', 'Layer with a statement gele and elegant accessories to complete the look'],
   },
   'The Modern Diva': {
     match: (a) => a.vibe === 'bold' || a.vibe === 'glamorous',
-    emoji: '💃', description: 'You live for the spotlight! Your fashion choices are fearless, dramatic, and always memorable. You know how to make an entrance.',
+    emoji: '💃', description: 'You live for the spotlight! Your fashion choices are fearless, dramatic, and always memorable. You know how to make an entrance and own every room.',
     categories: ['ready-to-wear', 'ankara', 'accessories'],
-    tips: ['Don\'t be afraid of mixing prints and textures', 'Statement earrings and bold clutches complete your look', 'Try our bespoke service for one-of-a-kind event outfits'],
+    tips: ['Don\'t be afraid of mixing prints and textures — go bold!', 'Statement earrings and bold clutches complete your look perfectly', 'Try our custom-made service for one-of-a-kind event outfits'],
   },
   'The Effortless Professional': {
     match: (a) => a.occasion === 'corporate' || a.vibe === 'minimalist',
-    emoji: '✨', description: 'You believe in the power of simplicity. Every piece in your wardrobe is intentional, versatile, and quietly luxurious.',
+    emoji: '✨', description: 'You believe in the power of simplicity. Every piece in your wardrobe is intentional, versatile, and quietly luxurious. You don\'t need to shout — your style speaks for you.',
     categories: ['ready-to-wear', 'bespoke'],
-    tips: ['Build a capsule wardrobe of tailored ankara basics', 'Neutral tones with one statement piece creates impact', 'Structured blazers and pencil skirts are your foundation'],
+    tips: ['Build a capsule wardrobe of tailored ankara basics — game changer!', 'Neutral tones with one statement piece always creates impact', 'Structured blazers and pencil skirts are your go-to foundation'],
   },
   'The Creative Spirit': {
     match: (a) => a.vibe === 'eclectic' || a.colour === 'bright',
-    emoji: '🎨', description: 'You see fashion as self-expression. You mix cultures, eras, and styles with effortless confidence, creating looks that are uniquely yours.',
+    emoji: '🎨', description: 'You see fashion as self-expression. You mix cultures, eras, and styles with effortless confidence — your looks are always uniquely, beautifully you.',
     categories: ['ankara', 'accessories', 'ready-to-wear'],
-    tips: ['Mix ankara with denim or leather for unexpected combos', 'Our custom design service lets your imagination run free', 'Layer accessories from different collections for a unique look'],
+    tips: ['Mix ankara with denim or leather for unexpected combos — trust me, it works!', 'Our custom design service lets your imagination run free', 'Layer accessories from different collections for a look that\'s all you'],
   },
   'The Celebration Queen': {
     match: (a) => a.occasion === 'owambe' || a.occasion === 'special',
-    emoji: '🎉', description: 'You dress for joy! Every outfit is a celebration of life, culture, and the moments that matter most. You\'re the life of every party.',
+    emoji: '🎉', description: 'You dress for joy! Every outfit is a celebration of life, culture, and the moments that matter most. You\'re the life of every party and everyone knows it!',
     categories: ['aso-ebi', 'ankara', 'bespoke'],
-    tips: ['Pre-plan your outfits for upcoming events', 'Our aso-ebi coordination service handles group orders', 'Consider having 2–3 bespoke pieces for rotating events'],
+    tips: ['Pre-plan your outfits for upcoming events — you\'ll always be ready', 'Our aso-ebi coordination service handles group orders so you don\'t have to stress', 'Have 2-3 custom-made pieces on rotation for events — you\'ll never repeat an outfit'],
   },
   'The African Heritage Queen': {
     match: () => true, // fallback
-    emoji: '🌺', description: 'You honour your roots while embracing modern fashion. Your wardrobe reflects the beauty and diversity of African culture with a personal twist.',
+    emoji: '🌺', description: 'You honour your roots while embracing modern fashion. Your wardrobe reflects the beauty and richness of African culture with your own personal flair.',
     categories: ['ankara', 'bespoke', 'aso-ebi'],
-    tips: ['Explore different African fabrics beyond ankara', 'A bespoke piece for each season keeps your wardrobe fresh', 'Mix traditional and contemporary elements for your signature look'],
+    tips: ['Explore different African fabrics beyond ankara — there\'s a whole world out there!', 'A custom-made piece for each season keeps your wardrobe fresh and exciting', 'Mix traditional and contemporary elements to create your own signature look'],
   },
 }
 
@@ -191,7 +191,7 @@ export default function StyleQuiz() {
                   Style <em style={{ fontStyle: 'italic', color: '#C9A84C' }}>Quiz</em>
                 </h1>
                 <p style={{ fontSize: 15, color: '#8A7A5A', maxWidth: 500, margin: '0 auto 40px', lineHeight: 1.8 }}>
-                  Answer 5 quick questions and discover your unique African fashion personality. We'll recommend pieces tailored to your style.
+                  Answer 5 quick questions and discover your unique fashion personality. We'll pick out pieces that match your style perfectly!
                 </p>
                 <button onClick={() => setStep(0)}
                   style={{
@@ -324,7 +324,7 @@ export default function StyleQuiz() {
                 {/* Recommended products */}
                 {products.length > 0 && (
                   <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0, transition: { delay: 0.6 } }}>
-                    <div style={{ ...labelStyle, marginBottom: 24 }}>Curated for You</div>
+                    <div style={{ ...labelStyle, marginBottom: 24 }}>Handpicked for You</div>
                     <div className="sbr-quiz-products" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: 16, marginBottom: 48 }}>
                       {products.map(p => (
                         <div key={p.id} style={{ background: '#111009', border: '1px solid rgba(201,168,76,0.1)', overflow: 'hidden' }}>
@@ -368,7 +368,7 @@ export default function StyleQuiz() {
                     Browse Collections
                   </Link>
                   <Link to="/bespoke" style={{ ...btn, background: 'transparent', border: '1px solid rgba(201,168,76,0.3)', color: '#C9A84C', padding: '16px 20px', textDecoration: 'none', textAlign: 'center' }}>
-                    Design Bespoke
+                    Design Custom Piece
                   </Link>
                 </div>
 

@@ -17,30 +17,30 @@ const TIERS = [
   {
     id: 'bronze', icon: Star, label: 'Bronze', emoji: '🌟',
     threshold: '₦0 - ₦99,999', colour: '#CD7F32',
-    perks: ['Welcome gift on first order', '5% off your second purchase', 'Early access to new collections', 'Birthday discount (10% off)'],
+    perks: ['A welcome gift with your first order', '5% off your second purchase', 'Early access to new collections', 'Birthday treat (10% off!)'],
   },
   {
     id: 'silver', icon: Sparkles, label: 'Silver', emoji: '✨',
     threshold: '₦100,000 - ₦299,999', colour: '#C0C0C0',
-    perks: ['All Bronze perks', '10% off all orders', 'Priority booking for consultations', 'Free basic alterations', 'Exclusive seasonal previews'],
+    perks: ['All Bronze perks', '10% off all orders', 'Priority booking when you chat with us', 'Free basic alterations', 'Exclusive seasonal previews'],
   },
   {
     id: 'gold', icon: Crown, label: 'Gold', emoji: '👑',
     threshold: '₦300,000 - ₦599,999', colour: '#C9A84C',
-    perks: ['All Silver perks', '15% off all orders', 'Complimentary styling consultation', 'Free delivery within Lagos', 'VIP event invitations', 'Anniversary gift'],
+    perks: ['All Silver perks', '15% off all orders', 'Free styling chat with Ruth', 'Free delivery within Lagos', 'VIP event invitations', 'Anniversary gift from us to you'],
   },
   {
     id: 'platinum', icon: Gem, label: 'Platinum', emoji: '💎',
     threshold: '₦600,000+', colour: '#E5E4E2',
-    perks: ['All Gold perks', '20% off all orders', 'Personal stylist assigned', 'Nationwide free delivery', 'First access to limited editions', 'Complimentary outfit per year', 'Private shopping experience'],
+    perks: ['All Gold perks', '20% off all orders', 'Your own personal stylist', 'Free delivery nationwide', 'First access to limited editions', 'A complimentary outfit every year!', 'Private shopping experience'],
   },
 ]
 
 const HOW_IT_WORKS = [
-  { step: '01', title: 'Shop & Earn', desc: 'Every Naira spent earns you points. The more you shop, the faster you climb tiers.' },
-  { step: '02', title: 'Unlock Perks', desc: 'As you reach new tiers, exclusive benefits automatically activate on your account.' },
-  { step: '03', title: 'Redeem Rewards', desc: 'Use your points for discounts, free accessories, or complimentary services.' },
-  { step: '04', title: 'Stay Royal', desc: 'Maintain your tier with annual spending. Your loyalty is always celebrated.' },
+  { step: '01', title: 'Shop & Earn', desc: 'Every Naira you spend earns you points. The more you shop, the faster you level up!' },
+  { step: '02', title: 'Unlock Perks', desc: 'As you reach new tiers, your benefits kick in automatically. No stress, no wahala.' },
+  { step: '03', title: 'Redeem Rewards', desc: 'Use your points for discounts, free accessories, or complimentary services. It\'s all yours!' },
+  { step: '04', title: 'Stay Royal', desc: 'Keep your tier with annual spending. We always celebrate our loyal family members.' },
 ]
 
 const btn = { fontFamily: 'Cinzel,serif', fontSize: 9, letterSpacing: '0.2em', textTransform: 'uppercase', cursor: 'pointer', transition: 'all 0.3s' }
@@ -109,7 +109,7 @@ export default function LoyaltyProgramme() {
               The SBR <em style={{ fontStyle: 'italic', color: '#C9A84C' }}>Loyalty</em> Programme
             </motion.h1>
             <motion.p variants={fadeUp} style={{ fontSize: 16, color: '#8A7A5A', maxWidth: 560, margin: '0 auto 32px', lineHeight: 1.9 }}>
-              Because our most cherished clients deserve more than beautiful clothes — they deserve beautiful experiences. Earn rewards with every purchase.
+              Because our favourite people deserve more than beautiful clothes — you deserve beautiful experiences too. Earn rewards every time you shop with us!
             </motion.p>
             <motion.button variants={fadeUp} onClick={() => setShowJoin(true)}
               style={{ ...btn, background: 'linear-gradient(135deg, #C9A84C, #8B6914)', border: 'none', color: '#0A0806', padding: '16px 40px', display: 'inline-flex', alignItems: 'center', gap: 8 }}>
@@ -209,11 +209,11 @@ export default function LoyaltyProgramme() {
             </div>
             <div style={{ maxWidth: 700, margin: '0 auto', display: 'flex', flexDirection: 'column', gap: 2 }}>
               {[
-                ['Is the loyalty programme free?', 'Absolutely! It\'s completely free to join. You start earning from your very first purchase.'],
-                ['How are points calculated?', 'You earn 1 point for every ₦100 spent. Points are tracked automatically through your WhatsApp number.'],
-                ['Do points expire?', 'Points are valid for 12 months from the date earned. Tier status is reviewed annually.'],
-                ['Can I combine loyalty discounts with other offers?', 'Loyalty tier discounts can be combined with seasonal promotions but not with other coupon codes.'],
-                ['How do I check my tier status?', 'Simply message us on WhatsApp and we\'ll share your current points balance and tier status.'],
+                ['Is the loyalty programme free?', 'Yes o! Totally free to join. You start earning from your very first purchase with us.'],
+                ['How are points calculated?', 'You earn 1 point for every ₦100 spent. We track everything through your WhatsApp number — nice and easy.'],
+                ['Do points expire?', 'Points are valid for 12 months from when you earned them. We review tier status once a year.'],
+                ['Can I combine loyalty discounts with other offers?', 'Yes! You can stack your loyalty discount with seasonal promos. Just not with other coupon codes.'],
+                ['How do I check my tier status?', 'Just send us a message on WhatsApp and we\'ll share your current points and tier status right away.'],
               ].map(([q, a], i) => (
                 <details key={i} style={{ background: '#111009', border: '1px solid rgba(201,168,76,0.08)', padding: '0 24px' }}>
                   <summary style={{
@@ -239,7 +239,7 @@ export default function LoyaltyProgramme() {
               Ready to Start Earning?
             </h3>
             <p style={{ fontSize: 14, color: '#8A7A5A', marginBottom: 28, maxWidth: 400, margin: '0 auto 28px' }}>
-              Join thousands of SBR clients who enjoy exclusive rewards with every purchase.
+              Join our growing family of SBR clients who enjoy exclusive rewards with every purchase.
             </p>
             <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
               <button onClick={() => setShowJoin(true)}

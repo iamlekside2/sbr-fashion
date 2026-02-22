@@ -6,7 +6,7 @@ import toast from 'react-hot-toast'
 import { MapPin, Phone, Instagram, Mail, Send } from 'lucide-react'
 
 export default function Contact() {
-  const [form, setForm] = useState({ name:'', email:'', whatsapp:'', subject:'General Enquiry', message:'' })
+  const [form, setForm] = useState({ name:'', email:'', whatsapp:'', subject:'General Question', message:'' })
   const [saving, setSaving] = useState(false)
   const [contact, setContact] = useState({})
 
@@ -36,11 +36,11 @@ export default function Contact() {
     setSaving(true)
     const { error } = await supabase.from('messages').insert({ name: form.name, email: form.email, whatsapp: form.whatsapp, subject: form.subject, message: form.message, read: false })
     if (error) toast.error('Something went wrong. Please try again.')
-    else { toast.success('Message sent! We\'ll get back to you soon.'); setForm({ name:'', email:'', whatsapp:'', subject:'General Enquiry', message:'' }) }
+    else { toast.success('Message sent! We\'ll get back to you soon.'); setForm({ name:'', email:'', whatsapp:'', subject:'General Question', message:'' }) }
     setSaving(false)
   }
 
-  const subjects = ['General Enquiry', 'Pricing & Quotes', 'Order Status', 'Collaboration', 'Wholesale / Bulk', 'Other']
+  const subjects = ['General Question', 'Pricing & Quotes', 'Order Status', 'Collaboration', 'Wholesale / Bulk', 'Other']
 
   return (
     <div>
@@ -48,11 +48,11 @@ export default function Contact() {
       <div style={{ minHeight:'100vh', background:'#0A0806', paddingTop:120, paddingBottom:80 }}>
         <div style={{ maxWidth:1100, margin:'0 auto', padding:'0 24px' }}>
           <div style={{ textAlign:'center', marginBottom:60 }}>
-            <div style={{ fontFamily:'Cinzel,serif', fontSize:9, letterSpacing:'0.4em', textTransform:'uppercase', color:'#C9A84C', marginBottom:16 }}>Get In Touch</div>
+            <div style={{ fontFamily:'Cinzel,serif', fontSize:9, letterSpacing:'0.4em', textTransform:'uppercase', color:'#C9A84C', marginBottom:16 }}>Talk to Us</div>
             <h1 style={{ fontFamily:'Cormorant Garamond,serif', fontSize:'clamp(36px,5vw,60px)', fontWeight:300, color:'#F9F4EC', marginBottom:16 }}>
               We'd Love to <em style={{ fontStyle:'italic', color:'#C9A84C' }}>Hear From You</em>
             </h1>
-            <p style={{ fontFamily:'Cormorant Garamond,serif', fontStyle:'italic', fontSize:16, color:'#8A7A5A' }}>Whether it's a question, a custom order, or just to say hello.</p>
+            <p style={{ fontFamily:'Cormorant Garamond,serif', fontStyle:'italic', fontSize:16, color:'#8A7A5A' }}>Whether it's a question, a custom order, or just to say hi — we're here.</p>
           </div>
 
           <div className="sbr-contact-grid" style={{ display:'grid', gridTemplateColumns:'1fr 380px', gap:48, alignItems:'start' }}>
@@ -86,7 +86,7 @@ export default function Contact() {
                 </div>
                 <div style={{ marginBottom:32 }}>
                   <label style={label}>Your Message *</label>
-                  <textarea style={{...inp, height:150, resize:'none'}} value={form.message} onChange={e => setForm({...form, message:e.target.value})} placeholder="Tell us what you need — we're here to help..."
+                  <textarea style={{...inp, height:150, resize:'none'}} value={form.message} onChange={e => setForm({...form, message:e.target.value})} placeholder="What's on your mind? We're always happy to chat..."
                     onFocus={e => (e.target.style.borderColor='#C9A84C')} onBlur={e => (e.target.style.borderColor='rgba(201,168,76,0.2)')} />
                 </div>
                 <button type="submit" disabled={saving} style={{ width:'100%', display:'flex', alignItems:'center', justifyContent:'center', gap:10, background:'linear-gradient(135deg,#E8C97A,#C9A84C)', color:'#0A0806', border:'none', padding:'18px', fontFamily:'Cinzel,serif', fontSize:10, fontWeight:600, letterSpacing:'0.3em', textTransform:'uppercase', cursor: saving ? 'not-allowed' : 'pointer', opacity: saving ? 0.7 : 1 }}>
@@ -121,12 +121,12 @@ export default function Contact() {
 
               {/* Quick CTA */}
               <div style={{ background:'#111009', border:'1px solid rgba(201,168,76,0.15)', padding:32, textAlign:'center' }}>
-                <div style={{ fontFamily:'Cormorant Garamond,serif', fontSize:20, fontWeight:300, color:'#F9F4EC', marginBottom:8 }}>Need something custom?</div>
-                <p style={{ fontSize:12, color:'#8A7A5A', marginBottom:20 }}>Book a private consultation for bespoke orders and styling.</p>
+                <div style={{ fontFamily:'Cormorant Garamond,serif', fontSize:20, fontWeight:300, color:'#F9F4EC', marginBottom:8 }}>Want something custom-made?</div>
+                <p style={{ fontSize:12, color:'#8A7A5A', marginBottom:20 }}>Book a chat with Ruth for custom orders and style advice.</p>
                 <a href="/book" style={{ fontFamily:'Cinzel,serif', fontSize:9, letterSpacing:'0.2em', textTransform:'uppercase', color:'#0A0806', background:'#C9A84C', padding:'12px 24px', textDecoration:'none', display:'inline-block', transition:'background 0.2s' }}
                   onMouseEnter={e => (e.currentTarget.style.background='#E8C97A')}
                   onMouseLeave={e => (e.currentTarget.style.background='#C9A84C')}>
-                  Book Consultation
+                  Let's Talk
                 </a>
               </div>
             </div>

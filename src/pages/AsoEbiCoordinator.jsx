@@ -137,7 +137,7 @@ export default function AsoEbiCoordinator() {
       }])
       if (error) throw error
       setDone(true)
-      toast.success('Aso-Ebi request submitted!')
+      toast.success('Your aso-ebi request is in! We\'ll be in touch soon.')
     } catch (err) {
       toast.error('Failed to submit. Please try again.')
     }
@@ -162,7 +162,7 @@ export default function AsoEbiCoordinator() {
               We're on It!
             </h2>
             <p style={{ fontSize: 14, color: '#8A7A5A', lineHeight: 1.8, marginBottom: 32 }}>
-              Our team will review your aso-ebi request and reach out within 24 hours with fabric samples, pricing, and a coordination plan for your {form.event_name || 'event'}.
+              We've got your request! We'll reach out within 24 hours with fabric samples, pricing, and a coordination plan for your {form.event_name || 'event'}. You're in good hands!
             </p>
             <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
               <a href={`https://wa.me/${cleanNum}?text=${encodeURIComponent(`Hi! I just submitted an aso-ebi coordination request for ${form.event_name}. My name is ${form.coordinator_name}.`)}`}
@@ -188,6 +188,7 @@ export default function AsoEbiCoordinator() {
       case 0: return (
         <motion.div key="step0" variants={fadeUp} initial="hidden" animate="show" exit="exit">
           <h3 style={{ fontFamily: 'Cormorant Garamond,serif', fontSize: 26, fontWeight: 300, color: '#F9F4EC', marginBottom: 24 }}>Tell Us About Your Event</h3>
+
           <div style={{ marginBottom: 20 }}>
             <label style={labelStyle}>Event Type</label>
             <div className="sbr-aso-event-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 10 }}>
@@ -267,11 +268,11 @@ export default function AsoEbiCoordinator() {
       )
       case 2: return (
         <motion.div key="step2" variants={fadeUp} initial="hidden" animate="show" exit="exit">
-          <h3 style={{ fontFamily: 'Cormorant Garamond,serif', fontSize: 26, fontWeight: 300, color: '#F9F4EC', marginBottom: 24 }}>Guest Coordination</h3>
+          <h3 style={{ fontFamily: 'Cormorant Garamond,serif', fontSize: 26, fontWeight: 300, color: '#F9F4EC', marginBottom: 24 }}>Who's Rocking the Outfits?</h3>
           <div style={{ marginBottom: 24 }}>
             <label style={labelStyle}>Number of Guests</label>
             <input type="number" value={form.guest_count} onChange={e => u('guest_count', e.target.value)}
-              placeholder="How many people need outfits?" style={inp} min="1"
+              placeholder="How many people are we dressing?" style={inp} min="1"
               onFocus={e => e.target.style.borderColor = 'rgba(201,168,76,0.5)'}
               onBlur={e => e.target.style.borderColor = 'rgba(201,168,76,0.2)'} />
           </div>
@@ -346,7 +347,7 @@ export default function AsoEbiCoordinator() {
           <div style={{ marginBottom: 20 }}>
             <label style={labelStyle}>Style Notes / Inspiration</label>
             <textarea value={form.style_notes} onChange={e => u('style_notes', e.target.value)}
-              rows={4} placeholder="Describe the look you're going for, any reference images, or specific design preferences..."
+              rows={4} placeholder="Tell us the look you're going for — share any reference images or design ideas you have in mind..."
               style={{ ...inp, resize: 'vertical' }}
               onFocus={e => e.target.style.borderColor = 'rgba(201,168,76,0.5)'}
               onBlur={e => e.target.style.borderColor = 'rgba(201,168,76,0.2)'} />
@@ -354,7 +355,7 @@ export default function AsoEbiCoordinator() {
           <div>
             <label style={labelStyle}>Additional Notes</label>
             <textarea value={form.additional_notes} onChange={e => u('additional_notes', e.target.value)}
-              rows={3} placeholder="Anything else we should know? (e.g. matching accessories needed, children's sizes, etc.)"
+              rows={3} placeholder="Anything else we should know? E.g. matching accessories, children's sizes, etc."
               style={{ ...inp, resize: 'vertical' }}
               onFocus={e => e.target.style.borderColor = 'rgba(201,168,76,0.5)'}
               onBlur={e => e.target.style.borderColor = 'rgba(201,168,76,0.2)'} />
@@ -422,12 +423,12 @@ export default function AsoEbiCoordinator() {
 
         {/* Header */}
         <div className="sbr-page-pad" style={{ padding: '0 60px', textAlign: 'center', marginBottom: 48 }}>
-          <div style={{ fontFamily: 'Cinzel,serif', fontSize: 9, letterSpacing: '0.4em', color: '#C9A84C', textTransform: 'uppercase', marginBottom: 16 }}>Group Coordination Made Easy</div>
+          <div style={{ fontFamily: 'Cinzel,serif', fontSize: 9, letterSpacing: '0.4em', color: '#C9A84C', textTransform: 'uppercase', marginBottom: 16 }}>We Handle the Stress for You</div>
           <h1 style={{ fontFamily: 'Cormorant Garamond,serif', fontSize: 'clamp(36px,5vw,56px)', fontWeight: 300, color: '#F9F4EC', margin: '0 0 12px' }}>
             Aso-Ebi <em style={{ fontStyle: 'italic', color: '#C9A84C' }}>Coordinator</em>
           </h1>
           <p style={{ fontSize: 15, color: '#8A7A5A', maxWidth: 560, margin: '0 auto', lineHeight: 1.8 }}>
-            Coordinating matching outfits for a group event? We handle the fabric sourcing, design, and tailoring so you can focus on celebrating.
+            Coordinating matching outfits for a group event? Relax — we'll handle the fabric sourcing, design, and tailoring so you can focus on celebrating.
           </p>
         </div>
 

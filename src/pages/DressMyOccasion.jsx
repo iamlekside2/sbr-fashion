@@ -15,16 +15,16 @@ const stagger = { show: { transition: { staggerChildren: 0.1 } } }
 
 /* ── OCCASION DATA ── */
 const OCCASIONS = [
-  { id: 'wedding', emoji: '💍', label: 'Wedding', desc: 'Bridal outfits, engagement looks, and wedding guest glamour', categories: ['bespoke','aso-ebi','ready-to-wear'], tip: 'For Nigerian weddings, we recommend starting fittings 6–8 weeks ahead. Consider aso-oke or premium lace for the ceremony and an ankara or brocade outfit for the reception.' },
-  { id: 'owambe', emoji: '🎉', label: 'Owambe / Party', desc: 'Turn heads at every celebration with show-stopping aso-ebi looks', categories: ['aso-ebi','ankara','ready-to-wear'], tip: 'Owambe is where you bring your A-game. Think bold colours, statement headwraps, and maximalist accessories. We can source matching aso-ebi fabric for your group.' },
-  { id: 'church', emoji: '⛪', label: 'Church / Sunday Best', desc: 'Elegant, modest styles perfect for worship and fellowship', categories: ['ready-to-wear','ankara','bespoke'], tip: 'Sophisticated cuts with modest necklines. We love pairing structured ankara blouses with midi skirts, or a tailored shift dress in premium crepe.' },
-  { id: 'corporate', emoji: '💼', label: 'Corporate / Office', desc: 'Power dressing with African flair for the modern professional', categories: ['ready-to-wear','bespoke'], tip: 'African prints in boardroom-appropriate cuts. Think tailored ankara blazers, pencil skirts, and sophisticated senator styles. Subtle prints and muted palettes work best.' },
-  { id: 'birthday', emoji: '🎂', label: 'Birthday Celebration', desc: 'Make your special day even more special with the perfect outfit', categories: ['ready-to-wear','ankara','bespoke'], tip: 'Your birthday outfit should be unapologetically YOU. Bold colours, daring cuts, and personal touches. We can custom-embroider your name or date into the design.' },
-  { id: 'date-night', emoji: '🌹', label: 'Date Night', desc: 'Romantic, chic ensembles for an unforgettable evening', categories: ['ready-to-wear','accessories'], tip: 'Less is more for date nights. A well-cut dress in a rich fabric says luxury without trying too hard. Pair with statement earrings and a clutch from our accessories line.' },
-  { id: 'naming', emoji: '👶', label: 'Naming Ceremony', desc: 'Coordinated family looks for this joyful cultural milestone', categories: ['aso-ebi','ankara','bespoke'], tip: 'Naming ceremonies call for coordinated family outfits. We can source matching fabrics and create complementary designs for the whole family, including the little one.' },
-  { id: 'graduation', emoji: '🎓', label: 'Graduation', desc: 'Celebrate your achievement in style with a look that commands attention', categories: ['ready-to-wear','ankara'], tip: 'Choose an outfit that photographs beautifully under the gown and stands out for after-ceremony celebrations. A-line dresses and fitted jumpsuits are popular choices.' },
-  { id: 'vacation', emoji: '✈️', label: 'Vacation / Travel', desc: 'Effortless, packable pieces with maximum impact', categories: ['ready-to-wear','ankara','accessories'], tip: 'Choose versatile pieces that can be dressed up or down. Ankara resort wear, flowy maxi dresses, and statement accessories that transition from beach to dinner.' },
-  { id: 'everyday', emoji: '✨', label: 'Everyday Luxury', desc: 'Elevate your daily wardrobe with carefully crafted essentials', categories: ['ready-to-wear','ankara'], tip: 'Invest in well-made basics that reflect your heritage. A perfectly tailored ankara top, quality cotton pieces, and versatile separates that mix and match beautifully.' },
+  { id: 'wedding', emoji: '💍', label: 'Wedding', desc: 'Bridal outfits, engagement looks, and wedding guest glamour', categories: ['bespoke','aso-ebi','ready-to-wear'], tip: 'Sis, start your fittings 6–8 weeks before the big day. Aso-oke or premium lace for the ceremony, then switch to ankara or brocade for the reception. Trust me, you\'ll thank yourself later!' },
+  { id: 'owambe', emoji: '🎉', label: 'Owambe / Party', desc: 'Show up and show out at every celebration with head-turning aso-ebi looks', categories: ['aso-ebi','ankara','ready-to-wear'], tip: 'Owambe is where you bring your full A-game! Bold colours, statement gele, and accessories that say "I came to slay." We can source matching aso-ebi fabric for your whole crew.' },
+  { id: 'church', emoji: '⛪', label: 'Church / Sunday Best', desc: 'Beautiful, modest styles perfect for worship and fellowship', categories: ['ready-to-wear','ankara','bespoke'], tip: 'Classy cuts with modest necklines always win. I love pairing structured ankara blouses with midi skirts, or a well-tailored shift dress in premium crepe. You\'ll look amazing!' },
+  { id: 'corporate', emoji: '💼', label: 'Corporate / Office', desc: 'Power dressing with African flair for the modern professional', categories: ['ready-to-wear','bespoke'], tip: 'African prints in boardroom-ready cuts — think tailored ankara blazers, pencil skirts, and sharp senator styles. Subtle prints and muted palettes work beautifully for the office.' },
+  { id: 'birthday', emoji: '🎂', label: 'Birthday Celebration', desc: 'Make your special day even more special with the perfect outfit', categories: ['ready-to-wear','ankara','bespoke'], tip: 'Your birthday outfit should be unapologetically YOU! Bold colours, daring cuts, and personal touches. We can even custom-embroider your name or date into the design.' },
+  { id: 'date-night', emoji: '🌹', label: 'Date Night', desc: 'Romantic, chic pieces for an unforgettable evening', categories: ['ready-to-wear','accessories'], tip: 'Less is more for date nights. A well-cut dress in a rich fabric speaks volumes. Pair it with statement earrings and a clutch from our accessories line — you\'ll love it!' },
+  { id: 'naming', emoji: '👶', label: 'Naming Ceremony', desc: 'Coordinated family looks for this joyful milestone', categories: ['aso-ebi','ankara','bespoke'], tip: 'Naming ceremonies call for coordinated family outfits. We\'ll source matching fabrics and create complementary designs for everyone — including the little one!' },
+  { id: 'graduation', emoji: '🎓', label: 'Graduation', desc: 'Celebrate your achievement in style with a look that commands attention', categories: ['ready-to-wear','ankara'], tip: 'Pick something that photographs beautifully under the gown and stands out for after-ceremony celebrations. A-line dresses and fitted jumpsuits are always a hit!' },
+  { id: 'vacation', emoji: '✈️', label: 'Vacation / Travel', desc: 'Effortless, packable pieces with maximum impact', categories: ['ready-to-wear','ankara','accessories'], tip: 'Go for versatile pieces that dress up or down easily. Ankara resort wear, flowy maxi dresses, and statement accessories that take you from beach to dinner — sorted!' },
+  { id: 'everyday', emoji: '✨', label: 'Everyday Luxury', desc: 'Elevate your daily wardrobe with beautifully made essentials', categories: ['ready-to-wear','ankara'], tip: 'Invest in well-made basics that reflect your style. A perfectly tailored ankara top, quality cotton pieces, and versatile separates that mix and match like a dream.' },
 ]
 
 const btn = {
@@ -97,7 +97,7 @@ export default function DressMyOccasion() {
             Dress My <em style={{ fontStyle: 'italic', color: '#C9A84C' }}>Occasion</em>
           </motion.h1>
           <motion.p variants={fadeUp} style={{ fontSize: 15, color: '#8A7A5A', maxWidth: 520, margin: '0 auto', lineHeight: 1.8 }}>
-            Tell us where you're going and we'll curate the perfect outfit selection for you.
+            Tell us where you're headed and we'll pick out the perfect pieces for you.
           </motion.p>
         </motion.div>
 
@@ -170,7 +170,7 @@ export default function DressMyOccasion() {
                 {/* Products grid */}
                 {loading ? (
                   <div style={{ textAlign: 'center', padding: '60px 0' }}>
-                    <div style={{ ...labelStyle, color: '#8A7A5A' }}>Curating your looks...</div>
+                    <div style={{ ...labelStyle, color: '#8A7A5A' }}>Finding your perfect looks...</div>
                   </div>
                 ) : products.length > 0 ? (
                   <>
@@ -224,7 +224,7 @@ export default function DressMyOccasion() {
                   <div style={{ textAlign: 'center', padding: '60px 0' }}>
                     <div style={{ fontSize: 40, marginBottom: 16 }}>🧵</div>
                     <div style={{ fontFamily: 'Cormorant Garamond,serif', fontSize: 24, color: '#F9F4EC', marginBottom: 12 }}>No pieces in stock for this occasion yet</div>
-                    <p style={{ fontSize: 13, color: '#8A7A5A', marginBottom: 32 }}>But don't worry — we can create a bespoke piece tailored perfectly for your {selected.label.toLowerCase()}.</p>
+                    <p style={{ fontSize: 13, color: '#8A7A5A', marginBottom: 32 }}>But don't worry — we can create a custom-made piece tailored perfectly for your {selected.label.toLowerCase()}.</p>
                   </div>
                 )}
 
@@ -241,7 +241,7 @@ export default function DressMyOccasion() {
                     onMouseEnter={e => e.currentTarget.style.opacity = '0.9'}
                     onMouseLeave={e => e.currentTarget.style.opacity = '1'}>
                     <div style={{ ...labelStyle, color: '#0A0806' }}>Want Something Custom?</div>
-                    <div style={{ fontFamily: 'Cormorant Garamond,serif', fontSize: 22, fontWeight: 400 }}>Design a Bespoke Piece</div>
+                    <div style={{ fontFamily: 'Cormorant Garamond,serif', fontSize: 22, fontWeight: 400 }}>Design a Custom-Made Piece</div>
                     <ArrowRight size={16} style={{ marginTop: 4 }} />
                   </Link>
 
@@ -255,8 +255,8 @@ export default function DressMyOccasion() {
                     }}
                     onMouseEnter={e => e.currentTarget.style.borderColor = 'rgba(201,168,76,0.6)'}
                     onMouseLeave={e => e.currentTarget.style.borderColor = 'rgba(201,168,76,0.3)'}>
-                    <div style={labelStyle}>Need Personal Styling?</div>
-                    <div style={{ fontFamily: 'Cormorant Garamond,serif', fontSize: 22, fontWeight: 400 }}>Chat with Ruth on WhatsApp</div>
+                    <div style={labelStyle}>Need Help Choosing?</div>
+                    <div style={{ fontFamily: 'Cormorant Garamond,serif', fontSize: 22, fontWeight: 400 }}>Let's Chat on WhatsApp</div>
                     <ArrowRight size={16} color="#C9A84C" style={{ marginTop: 4 }} />
                   </a>
                 </div>

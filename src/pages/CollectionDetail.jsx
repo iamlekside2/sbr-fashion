@@ -176,7 +176,7 @@ export default function CollectionDetail() {
                 {[
                   ['Category', product.category],
                   ['Availability', product.in_stock ? 'In Stock' : 'Made to Order'],
-                  ['Type', product.category === 'bespoke' ? 'Custom Made' : 'Ready to Wear'],
+                  ['Type', product.category === 'bespoke' ? 'Custom-Made' : 'Ready to Wear'],
                   ['Collection', 'Current Season'],
                 ].map(([label, value]) => (
                   <div key={label}>
@@ -206,13 +206,13 @@ export default function CollectionDetail() {
                 <Link to="/book" style={{ flex: 1, fontFamily: 'Cinzel,serif', fontSize: 10, fontWeight: 600, letterSpacing: '0.2em', textTransform: 'uppercase', color: inCart ? '#C9A84C' : '#0A0806', background: inCart ? 'transparent' : 'linear-gradient(135deg,#E8C97A,#C9A84C)', border: inCart ? '1px solid rgba(201,168,76,0.4)' : 'none', padding: '18px 24px', textDecoration: 'none', textAlign: 'center', transition: 'all 0.2s' }}
                   onMouseEnter={e => { if (inCart) { e.currentTarget.style.background = 'rgba(201,168,76,0.1)' } else { e.currentTarget.style.opacity = '0.9' } }}
                   onMouseLeave={e => { if (inCart) { e.currentTarget.style.background = 'transparent' } else { e.currentTarget.style.opacity = '1' } }}>
-                  Book Consultation
+                  Let's Chat About This
                 </Link>
                 <a href={`https://wa.me/?text=${encodeURIComponent(`Hi, I'm interested in the ${product.name} (₦${Number(product.price).toLocaleString()}) from Stitches by Ruthchinos.`)}`} target="_blank" rel="noreferrer"
                   style={{ flex: 1, fontFamily: 'Cinzel,serif', fontSize: 10, fontWeight: 600, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#C9A84C', background: 'transparent', border: '1px solid rgba(201,168,76,0.4)', padding: '18px 24px', textDecoration: 'none', textAlign: 'center', transition: 'all 0.2s' }}
                   onMouseEnter={e => { e.currentTarget.style.background = 'rgba(201,168,76,0.1)'; e.currentTarget.style.borderColor = '#C9A84C' }}
                   onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.borderColor = 'rgba(201,168,76,0.4)' }}>
-                  Inquire on WhatsApp
+                  Message Us on WhatsApp
                 </a>
               </motion.div>
             </motion.div>
@@ -222,7 +222,7 @@ export default function CollectionDetail() {
           {related.length > 0 && (
             <div style={{ marginTop: 120 }}>
               <div style={{ textAlign: 'center', marginBottom: 48 }}>
-                <div style={{ fontFamily: 'Cinzel,serif', fontSize: 9, letterSpacing: '0.4em', textTransform: 'uppercase', color: '#C9A84C', marginBottom: 12 }}>You May Also Like</div>
+                <div style={{ fontFamily: 'Cinzel,serif', fontSize: 9, letterSpacing: '0.4em', textTransform: 'uppercase', color: '#C9A84C', marginBottom: 12 }}>You'll Love These Too</div>
                 <h2 style={{ fontFamily: 'Cormorant Garamond,serif', fontSize: 'clamp(28px,3vw,40px)', fontWeight: 300, color: '#F9F4EC' }}>
                   More from <em style={{ fontStyle: 'italic', color: '#C9A84C', textTransform: 'capitalize' }}>{product.category}</em>
                 </h2>

@@ -52,8 +52,8 @@ export default function OrderConfirmation() {
 
             <motion.p variants={fadeUp} style={{ fontFamily: 'Cormorant Garamond,serif', fontSize: 18, fontStyle: 'italic', color: '#8A7A5A', marginBottom: 48 }}>
               {method === 'paystack'
-                ? 'Your payment has been received. We\'ll start preparing your order.'
-                : 'Your order has been submitted. Please complete payment via WhatsApp.'}
+                ? 'Your payment is confirmed! We\'re already getting your order ready with love.'
+                : 'Your order is in! Just complete your payment via WhatsApp and we\'ll take it from there.'}
             </motion.p>
 
             {/* Order details card */}
@@ -110,9 +110,9 @@ export default function OrderConfirmation() {
               <div style={{ fontFamily: 'Cinzel,serif', fontSize: 9, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#C9A84C', marginBottom: 20 }}>What Happens Next</div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
                 {[
-                  ['1', 'We\'ll confirm item availability and reach out via WhatsApp within 24 hours.'],
-                  ['2', method === 'paystack' ? 'Your order will be prepared and packaged with care.' : 'Complete your payment via WhatsApp or bank transfer.'],
-                  ['3', 'We\'ll arrange delivery to your preferred location in Lagos (or ship nationwide).'],
+                  ['1', 'We\'ll confirm everything and reach out to you on WhatsApp within 24 hours.'],
+                  ['2', method === 'paystack' ? 'Your order will be prepared and packaged with care and attention.' : 'Complete your payment via WhatsApp or bank transfer — we\'ll guide you through it.'],
+                  ['3', 'We\'ll arrange delivery to your door in Lagos or ship nationwide. Easy!'],
                 ].map(([n, text]) => (
                   <div key={n} style={{ display: 'flex', gap: 16, alignItems: 'flex-start' }}>
                     <div style={{ width: 28, height: 28, borderRadius: '50%', border: '1px solid rgba(201,168,76,0.3)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'Cormorant Garamond,serif', fontSize: 14, color: '#C9A84C', flexShrink: 0 }}>{n}</div>

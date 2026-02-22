@@ -51,7 +51,7 @@ export default function Footer() {
       <div className="sbr-footer-grid" style={s.grid}>
         <div>
           <img src="/logo-gold.png" alt="SBR" style={{ height:56, marginBottom:20 }} />
-          <div style={s.tagline}>"Stitching Dreams Into Reality"</div>
+          <div style={s.tagline}>"We Make You Look Amazing"</div>
           <div style={{ display:'flex', gap:12 }}>
             {socials.map(({ icon: Icon, href, label }) => (
               <a key={label} href={href} target="_blank" rel="noreferrer" aria-label={label} style={{ width:36, height:36, border:'1px solid rgba(201,168,76,0.2)', display:'flex', alignItems:'center', justifyContent:'center', color:'#8A7A5A', transition:'all 0.3s' }}
@@ -65,7 +65,7 @@ export default function Footer() {
 
         <div>
           <div style={s.colTitle}>Quick Links</div>
-          {[['/', 'Home'], ['/collections', 'Collections'], ['/services', 'Services'], ['/lookbook', 'Lookbook'], ['/book', 'Book Now']].map(([to, label]) => (
+          {[['/', 'Home'], ['/collections', 'Collections'], ['/services', 'Services'], ['/lookbook', 'Our Work'], ['/book', 'Let\'s Talk']].map(([to, label]) => (
             <Link key={to} to={to} style={s.link}
               onMouseEnter={e=>(e.currentTarget.style.color='#C9A84C')}
               onMouseLeave={e=>(e.currentTarget.style.color='#8A7A5A')}>
@@ -77,11 +77,11 @@ export default function Footer() {
         <div>
           <div style={s.colTitle}>Services</div>
           {[
-            ['/collections?cat=bespoke', 'Bespoke Tailoring'],
+            ['/collections?cat=bespoke', 'Custom-Made Outfits'],
             ['/collections?cat=ready-to-wear', 'Ready-to-Wear'],
             ['/collections?cat=ankara', 'Ankara Pieces'],
             ['/collections?cat=accessories', 'Accessories'],
-            ['/collections?cat=aso-ebi', 'Aso-Ebi Orders'],
+            ['/collections?cat=aso-ebi', 'Aso-Ebi Styles'],
           ].map(([to, label]) => (
             <Link key={label} to={to} style={s.link}
               onMouseEnter={e=>(e.currentTarget.style.color='#C9A84C')}
@@ -137,7 +137,7 @@ export default function Footer() {
 
       <div className="sbr-footer-bottom" style={s.bottom}>
         <div style={s.copy}>© {new Date().getFullYear()} <span style={{color:'#C9A84C'}}>Stitches by Ruthchinos</span>. All rights reserved.</div>
-        <div style={s.copy}>Designed with ♥ for African Fashion</div>
+        <div style={s.copy}>Made with love in Lagos, Nigeria</div>
       </div>
     </footer>
   )

@@ -185,7 +185,7 @@ export default function Cart() {
                 Your cart is empty
               </h2>
               <p style={{ fontSize: 14, color: '#8A7A5A', marginBottom: 40, maxWidth: 400, margin: '0 auto 40px' }}>
-                Discover our curated collections and find pieces that tell your story.
+                Explore our collections and find beautiful pieces made just for you.
               </p>
               <Link to="/collections" style={{ fontFamily: 'Cinzel,serif', fontSize: 10, fontWeight: 500, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#0A0806', background: 'linear-gradient(135deg,#E8C97A,#C9A84C)', padding: '18px 40px', textDecoration: 'none', display: 'inline-block' }}>
                 Shop Collections
@@ -281,7 +281,7 @@ export default function Cart() {
                     </div>
                     <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                       <span style={{ fontSize: 13, color: '#8A7A5A' }}>Delivery</span>
-                      <span style={{ fontSize: 13, color: '#8A7A5A', fontStyle: 'italic' }}>Calculated later</span>
+                      <span style={{ fontSize: 13, color: '#8A7A5A', fontStyle: 'italic' }}>We'll sort this out for you</span>
                     </div>
                   </div>
 
@@ -385,7 +385,7 @@ export default function Cart() {
                         )}
 
                         <p style={{ fontSize: 11, color: '#8A7A5A', lineHeight: 1.7, marginTop: 16, textAlign: 'center' }}>
-                          Secure payment powered by Paystack. We'll confirm availability and arrange delivery via WhatsApp.
+                          Secure payment powered by Paystack. We'll confirm your items and arrange delivery via WhatsApp. You're in safe hands!
                         </p>
                       </div>
                     </motion.div>

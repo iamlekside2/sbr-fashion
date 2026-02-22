@@ -35,7 +35,7 @@ export default function Wishlist() {
           {/* Header */}
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 48, flexWrap: 'wrap', gap: 16 }}>
             <div>
-              <div style={{ fontFamily: 'Cinzel,serif', fontSize: 9, letterSpacing: '0.4em', textTransform: 'uppercase', color: '#C9A84C', marginBottom: 12 }}>Your Collection</div>
+              <div style={{ fontFamily: 'Cinzel,serif', fontSize: 9, letterSpacing: '0.4em', textTransform: 'uppercase', color: '#C9A84C', marginBottom: 12 }}>Pieces You Love</div>
               <h1 style={{ fontFamily: 'Cormorant Garamond,serif', fontSize: 'clamp(36px,5vw,52px)', fontWeight: 300, color: '#F9F4EC' }}>
                 Wishlist <span style={{ fontFamily: 'Jost,sans-serif', fontSize: 20, color: '#8A7A5A', fontWeight: 300 }}>({items.length})</span>
               </h1>
@@ -55,10 +55,10 @@ export default function Wishlist() {
               style={{ textAlign: 'center', padding: '60px 0' }}>
               <Heart size={48} color="#8A7A5A" style={{ marginBottom: 20, opacity: 0.5 }} />
               <h2 style={{ fontFamily: 'Cormorant Garamond,serif', fontSize: 28, fontWeight: 300, color: '#F9F4EC', marginBottom: 12 }}>
-                Your wishlist is empty
+                Nothing here yet!
               </h2>
               <p style={{ fontSize: 14, color: '#8A7A5A', marginBottom: 32, lineHeight: 1.7 }}>
-                Browse our collections and tap the heart icon to save pieces you love.
+                Browse our collections and tap the heart icon to save pieces you love. Your favourites will be waiting right here.
               </p>
               <Link to="/collections"
                 style={{ ...btn, background: 'linear-gradient(135deg, #C9A84C, #8B6914)', border: 'none', color: '#0A0806', padding: '14px 32px', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 8 }}>

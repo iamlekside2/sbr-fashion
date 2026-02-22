@@ -25,12 +25,12 @@ const CATEGORIES = [
 
 /* Default swatches shown when no DB records exist */
 const DEFAULT_SWATCHES = [
-  { id: 'd1', name: 'Royal Blue Ankara', category: 'ankara', colour: 'Blue', price_per_yard: 5000, description: 'Bold royal blue with traditional motifs. Perfect for occasion wear.', image_url: '' },
-  { id: 'd2', name: 'Gold Brocade Imperial', category: 'brocade', colour: 'Gold', price_per_yard: 8000, description: 'Rich gold brocade with woven patterns. Ideal for agbada and senator styles.', image_url: '' },
-  { id: 'd3', name: 'Ivory Swiss Lace', category: 'lace', colour: 'Ivory', price_per_yard: 12000, description: 'Premium Swiss voile lace with intricate embroidery. Wedding favourite.', image_url: '' },
-  { id: 'd4', name: 'Emerald Silk Charmeuse', category: 'silk', colour: 'Green', price_per_yard: 10000, description: 'Luxurious silk charmeuse with a beautiful drape. Perfect for evening gowns.', image_url: '' },
-  { id: 'd5', name: 'Coral Aso-Oke', category: 'aso-oke', colour: 'Coral', price_per_yard: 15000, description: 'Hand-woven Yoruba prestige cloth in stunning coral. Ceremony essential.', image_url: '' },
-  { id: 'd6', name: 'White Cotton Poplin', category: 'cotton', colour: 'White', price_per_yard: 3500, description: 'Crisp cotton poplin, breathable and versatile. Great for everyday luxury.', image_url: '' },
+  { id: 'd1', name: 'Royal Blue Ankara', category: 'ankara', colour: 'Blue', price_per_yard: 5000, description: 'Bold royal blue with traditional motifs. This one is perfect for turning heads at any event!', image_url: '' },
+  { id: 'd2', name: 'Gold Brocade Imperial', category: 'brocade', colour: 'Gold', price_per_yard: 8000, description: 'Rich gold brocade with woven patterns. A top pick for agbada and senator styles.', image_url: '' },
+  { id: 'd3', name: 'Ivory Swiss Lace', category: 'lace', colour: 'Ivory', price_per_yard: 12000, description: 'Premium Swiss voile lace with intricate embroidery. A favourite for weddings — you\'ll love the feel!', image_url: '' },
+  { id: 'd4', name: 'Emerald Silk Charmeuse', category: 'silk', colour: 'Green', price_per_yard: 10000, description: 'Luxurious silk charmeuse with a gorgeous drape. Perfect for evening gowns that make a statement.', image_url: '' },
+  { id: 'd5', name: 'Coral Aso-Oke', category: 'aso-oke', colour: 'Coral', price_per_yard: 15000, description: 'Hand-woven Yoruba prestige cloth in stunning coral. A must-have for ceremonies!', image_url: '' },
+  { id: 'd6', name: 'White Cotton Poplin', category: 'cotton', colour: 'White', price_per_yard: 3500, description: 'Crisp cotton poplin — breathable, versatile, and great for everyday wear.', image_url: '' },
 ]
 
 const inp = {
@@ -104,7 +104,7 @@ export default function FabricSwatches() {
         message: `Swatch samples requested:\n${requestItems.map(s => `- ${s.name} (${s.category})`).join('\n')}\n\nNotes: ${form.notes || 'None'}`,
       }])
       if (error) throw error
-      toast.success('Swatch request sent! We\'ll reach out soon.')
+      toast.success('Request sent! We\'ll be in touch soon with your samples.')
       setRequestOpen(false)
       setRequestItems([])
       setForm({ name: '', email: '', whatsapp: '', notes: '' })
@@ -129,7 +129,7 @@ export default function FabricSwatches() {
               Fabric <em style={{ fontStyle: 'italic', color: '#C9A84C' }}>Swatches</em>
             </h1>
             <p style={{ fontSize: 15, color: '#8A7A5A', maxWidth: 520, margin: '0 auto', lineHeight: 1.8 }}>
-              Browse our curated collection of premium fabrics. Select your favourites and request physical samples delivered to you.
+              Browse our beautiful collection of premium fabrics. Pick your favourites and we'll send you physical samples — it's that easy!
             </p>
           </div>
 
@@ -335,7 +335,7 @@ export default function FabricSwatches() {
                 </div>
                 <div>
                   <label style={labelStyle}>Notes (Optional)</label>
-                  <textarea value={form.notes} onChange={e => setForm(p => ({ ...p, notes: e.target.value }))} rows={2} placeholder="What are you making? Any specific requirements?" style={{ ...inp, resize: 'vertical' }}
+                  <textarea value={form.notes} onChange={e => setForm(p => ({ ...p, notes: e.target.value }))} rows={2} placeholder="What are you making? Any specific things you'd like us to know?" style={{ ...inp, resize: 'vertical' }}
                     onFocus={e => e.target.style.borderColor = 'rgba(201,168,76,0.5)'}
                     onBlur={e => e.target.style.borderColor = 'rgba(201,168,76,0.2)'} />
                 </div>

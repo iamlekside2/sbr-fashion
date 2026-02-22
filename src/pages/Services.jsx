@@ -3,11 +3,11 @@ import Footer from '../components/Footer'
 
 export default function Services() {
   const services = [
-    { emoji: '✂️', title: 'Bespoke Tailoring', desc: 'The pinnacle of our craft. Every bespoke piece begins with an in-depth consultation where we learn your lifestyle, aesthetic preferences, and the occasion you\'re dressing for. We then create a unique design, select your fabric together, and hand-craft every detail to your exact measurements.', price: 'From ₦80,000', time: '3–6 weeks' },
-    { emoji: '🎨', title: 'Styling Consultation', desc: 'A private session with Ruth herself. We\'ll analyze your wardrobe, understand your style identity, and create a plan to build a wardrobe that works for your life — whether you\'re preparing for a big event, a career change, or simply wanting to look your best every day.', price: 'From ₦25,000', time: '2–3 hours' },
-    { emoji: '🌺', title: 'Ankara & African Print', desc: 'Our ready-to-wear collection of meticulously crafted Ankara and African print pieces. Each garment is designed in-house, crafted from premium fabric, and available in limited quantities. Sizes range from XS to 5XL.', price: 'From ₦45,000', time: 'Ready to ship' },
-    { emoji: '💫', title: 'Occasion & Aso-Ebi', desc: 'From bridal fittings to entire family Aso-Ebi coordination, we make sure everyone looks extraordinary on your most important days. We handle fabric sourcing, uniform design, and coordinated tailoring for groups of all sizes.', price: 'From ₦60,000/person', time: '2–4 weeks' },
-    { emoji: '💍', title: 'Accessories', desc: 'Hand-selected and custom-designed accessories that complete the look. From statement jewellery to custom bags, headpieces, and belts — every accessory is chosen to complement African fashion beautifully.', price: 'From ₦12,000', time: 'In stock' },
+    { emoji: '✂️', title: 'Custom-Made Outfits', desc: 'This is what we do best. Every custom outfit starts with a real conversation — we learn your style, your body, what you love. Then we design it, pick the fabric together, and sew every detail to your exact measurements.', price: 'From ₦80,000', time: '3–6 weeks' },
+    { emoji: '🎨', title: 'Style Advice Session', desc: 'Sit down with Ruth one-on-one. We\'ll go through your wardrobe, figure out what works for you, and create a plan — whether it\'s for a big event, work, or just looking your best every day.', price: 'From ₦25,000', time: '2–3 hours' },
+    { emoji: '🌺', title: 'Ankara & Print Pieces', desc: 'Ready-to-wear ankara and print pieces designed right here in our Lagos studio. Quality fabrics, beautiful designs, and available from XS to 5XL.', price: 'From ₦45,000', time: 'Ready to ship' },
+    { emoji: '💫', title: 'Owambe & Aso-Ebi', desc: 'From wedding outfits to full Aso-Ebi coordination for your squad — we make sure everyone shows up looking amazing. We handle the fabric, the design, and the sewing for any group size.', price: 'From ₦60,000/person', time: '2–4 weeks' },
+    { emoji: '💍', title: 'Accessories', desc: 'The finishing touches that bring everything together. Statement jewellery, custom bags, headpieces, and belts — handpicked to match your outfit perfectly.', price: 'From ₦12,000', time: 'In stock' },
   ]
 
   return (
@@ -16,9 +16,9 @@ export default function Services() {
       <div style={{ minHeight: '100vh', background: '#0A0806', paddingTop: 120, paddingBottom: 80 }}>
         <div className="sbr-page-pad" style={{ padding: '0 60px' }}>
           <div style={{ textAlign: 'center', marginBottom: 80 }}>
-            <div style={{ fontFamily: 'Cinzel,serif', fontSize: 9, letterSpacing: '0.4em', textTransform: 'uppercase', color: '#C9A84C', marginBottom: 16 }}>What We Offer</div>
+            <div style={{ fontFamily: 'Cinzel,serif', fontSize: 9, letterSpacing: '0.4em', textTransform: 'uppercase', color: '#C9A84C', marginBottom: 16 }}>What We Do</div>
             <h1 style={{ fontFamily: 'Cormorant Garamond,serif', fontSize: 'clamp(40px,5vw,64px)', fontWeight: 300, color: '#F9F4EC' }}>
-              Services <em style={{ fontStyle: 'italic', color: '#C9A84C' }}>Built for You</em>
+              How We Can <em style={{ fontStyle: 'italic', color: '#C9A84C' }}>Help You</em>
             </h1>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>

@@ -25,7 +25,7 @@ export default function Lookbook() {
           <div style={{ textAlign: 'center', marginBottom: 60 }}>
             <div style={{ fontFamily: 'Cinzel,serif', fontSize: 9, letterSpacing: '0.4em', textTransform: 'uppercase', color: '#C9A84C', marginBottom: 16 }}>Our Work</div>
             <h1 style={{ fontFamily: 'Cormorant Garamond,serif', fontSize: 'clamp(40px,5vw,64px)', fontWeight: 300, color: '#F9F4EC' }}>
-              The <em style={{ fontStyle: 'italic', color: '#C9A84C' }}>Lookbook</em>
+              Our <em style={{ fontStyle: 'italic', color: '#C9A84C' }}>Work</em>
             </h1>
           </div>
 
