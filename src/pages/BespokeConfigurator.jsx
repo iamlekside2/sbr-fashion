@@ -16,30 +16,30 @@ const fadeUp = {
 
 /* ── STEP DATA ── */
 const GARMENTS = [
-  { id: 'dress', image: 'https://images.unsplash.com/photo-1590735213920-68192a487bc2?w=300&h=200&fit=crop', label: 'Dress / Gown', desc: 'Elegant dresses, evening gowns, and midi styles' },
-  { id: 'suit', image: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=300&h=200&fit=crop', label: 'Suit / Two-Piece', desc: 'Tailored suits, senator styles, and matching sets' },
-  { id: 'agbada', image: 'https://images.unsplash.com/photo-1523264653568-69f0e8031ec2?w=300&h=200&fit=crop', label: 'Agbada / Kaftan', desc: 'Grand Agbada, flowing kaftans, and traditional robes' },
-  { id: 'blouse-skirt', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=300&h=200&fit=crop', label: 'Blouse & Skirt', desc: 'Peplum blouses, iro and buba, skirt combinations' },
-  { id: 'jumpsuit', image: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=300&h=200&fit=crop', label: 'Jumpsuit / Playsuit', desc: 'Chic jumpsuits and modern playsuits' },
-  { id: 'bridal', image: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=300&h=200&fit=crop', label: 'Bridal Outfit', desc: 'Wedding dresses, engagement outfits, aso-oke sets' },
+  { id: 'dress', image: 'https://source.unsplash.com/200x200/?african-print-dress', label: 'Dress / Gown', desc: 'Elegant dresses, evening gowns, and midi styles' },
+  { id: 'suit', image: 'https://source.unsplash.com/200x200/?yoruba-fashion', label: 'Suit / Two-Piece', desc: 'Tailored suits, senator styles, and matching sets' },
+  { id: 'agbada', image: 'https://source.unsplash.com/200x200/?ankara', label: 'Agbada / Kaftan', desc: 'Grand Agbada, flowing kaftans, and traditional robes' },
+  { id: 'blouse-skirt', image: 'https://source.unsplash.com/200x200/?west-african-fashion', label: 'Blouse & Skirt', desc: 'Peplum blouses, iro and buba, skirt combinations' },
+  { id: 'jumpsuit', image: 'https://source.unsplash.com/200x200/?kente-fashion', label: 'Jumpsuit / Playsuit', desc: 'Chic jumpsuits and modern playsuits' },
+  { id: 'bridal', image: 'https://source.unsplash.com/200x200/?african-lace-dress', label: 'Bridal Outfit', desc: 'Wedding dresses, engagement outfits, aso-oke sets' },
 ]
 
 const STYLES = [
-  { id: 'modern', image: 'https://images.unsplash.com/photo-1509631179647-0177331693ae?w=300&h=200&fit=crop', label: 'Modern & Contemporary', desc: 'Clean lines, modern cuts, minimal embellishments' },
-  { id: 'traditional', image: 'https://images.unsplash.com/photo-1523264653568-69f0e8031ec2?w=300&h=200&fit=crop', label: 'Traditional African', desc: 'Classic Nigerian silhouettes, cultural richness' },
-  { id: 'fusion', image: 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=300&h=200&fit=crop', label: 'Afro-Fusion', desc: 'Blending African heritage with global fashion trends' },
-  { id: 'glamour', image: 'https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=300&h=200&fit=crop', label: 'Full Glamour', desc: 'Heavy embellishments, beadwork, stones, luxe finish' },
-  { id: 'minimalist', image: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=300&h=200&fit=crop', label: 'Elegant Minimalist', desc: 'Understated luxury, quality over ornamentation' },
+  { id: 'modern', image: 'https://source.unsplash.com/200x200/?ankara-fashion', label: 'Modern & Contemporary', desc: 'Clean lines, modern cuts, minimal embellishments' },
+  { id: 'traditional', image: 'https://source.unsplash.com/200x200/?african-lace-dress', label: 'Traditional African', desc: 'Classic Nigerian silhouettes, cultural richness' },
+  { id: 'fusion', image: 'https://source.unsplash.com/200x200/?west-african-fashion', label: 'Afro-Fusion', desc: 'Blending African heritage with global fashion trends' },
+  { id: 'glamour', image: 'https://source.unsplash.com/200x200/?yoruba-fashion', label: 'Full Glamour', desc: 'Heavy embellishments, beadwork, stones, luxe finish' },
+  { id: 'minimalist', image: 'https://source.unsplash.com/200x200/?kente-fashion', label: 'Elegant Minimalist', desc: 'Understated luxury, quality over ornamentation' },
 ]
 
 const FABRICS = [
-  { id: 'ankara', image: 'https://images.unsplash.com/photo-1590735213920-68192a487bc2?w=300&h=200&fit=crop', label: 'Ankara Print', desc: 'Bold African wax prints in vibrant patterns', price: '₦45,000+' },
-  { id: 'aso-oke', image: 'https://images.unsplash.com/photo-1558171813-4c088753af8f?w=300&h=200&fit=crop', label: 'Aso-Oke', desc: 'Hand-woven Yoruba prestige cloth', price: '₦85,000+' },
-  { id: 'lace', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=300&h=200&fit=crop', label: 'French / Swiss Lace', desc: 'Premium imported lace with intricate detailing', price: '₦70,000+' },
-  { id: 'silk', image: 'https://images.unsplash.com/photo-1509631179647-0177331693ae?w=300&h=200&fit=crop', label: 'Silk & Satin', desc: 'Luxurious silk and satin for a flowing finish', price: '₦60,000+' },
-  { id: 'brocade', image: 'https://images.unsplash.com/photo-1523264653568-69f0e8031ec2?w=300&h=200&fit=crop', label: 'Brocade / Jacquard', desc: 'Rich textured fabrics with woven patterns', price: '₦55,000+' },
-  { id: 'crepe', image: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=300&h=200&fit=crop', label: 'Crepe / Chiffon', desc: 'Lightweight, elegant draping fabrics', price: '₦50,000+' },
-  { id: 'own-fabric', image: 'https://images.unsplash.com/photo-1611085583191-a3b181a88401?w=300&h=200&fit=crop', label: 'I Have My Own Fabric', desc: 'Send us your fabric and we\'ll craft the outfit', price: 'Sewing only' },
+  { id: 'ankara', image: 'https://source.unsplash.com/200x200/?african-print-fabric', label: 'Ankara Print', desc: 'Bold African wax prints in vibrant patterns', price: '₦45,000+' },
+  { id: 'aso-oke', image: 'https://source.unsplash.com/200x200/?african-lace-dress', label: 'Aso-Oke', desc: 'Hand-woven Yoruba prestige cloth', price: '₦85,000+' },
+  { id: 'lace', image: 'https://source.unsplash.com/200x200/?african-fabric', label: 'French / Swiss Lace', desc: 'Premium imported lace with intricate detailing', price: '₦70,000+' },
+  { id: 'silk', image: 'https://source.unsplash.com/200x200/?african-print-fabric', label: 'Silk & Satin', desc: 'Luxurious silk and satin for a flowing finish', price: '₦60,000+' },
+  { id: 'brocade', image: 'https://source.unsplash.com/200x200/?african-lace-dress', label: 'Brocade / Jacquard', desc: 'Rich textured fabrics with woven patterns', price: '₦55,000+' },
+  { id: 'crepe', image: 'https://source.unsplash.com/200x200/?african-fabric', label: 'Crepe / Chiffon', desc: 'Lightweight, elegant draping fabrics', price: '₦50,000+' },
+  { id: 'own-fabric', image: 'https://source.unsplash.com/200x200/?african-print-fabric', label: 'I Have My Own Fabric', desc: 'Send us your fabric and we\'ll craft the outfit', price: 'Sewing only' },
 ]
 
 const OCCASIONS = [

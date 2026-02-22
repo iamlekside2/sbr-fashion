@@ -14,14 +14,14 @@ const fadeUp = {
 }
 
 const EVENT_TYPES = [
-  { id: 'wedding', image: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=120&h=120&fit=crop', label: 'Wedding' },
-  { id: 'engagement', image: 'https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?w=120&h=120&fit=crop', label: 'Engagement / Introduction' },
-  { id: 'naming', image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=120&h=120&fit=crop', label: 'Naming Ceremony' },
-  { id: 'birthday', image: 'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=120&h=120&fit=crop', label: 'Birthday Celebration' },
-  { id: 'funeral', image: 'https://images.unsplash.com/photo-1490750967868-88aa4f44baee?w=120&h=120&fit=crop', label: 'Funeral / Remembrance' },
-  { id: 'reunion', image: 'https://images.unsplash.com/photo-1511895426328-dc8714191300?w=120&h=120&fit=crop', label: 'Family Reunion' },
-  { id: 'church', image: 'https://images.unsplash.com/photo-1438232992991-995b7058bbb3?w=120&h=120&fit=crop', label: 'Church / Group Event' },
-  { id: 'other', image: 'https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=120&h=120&fit=crop', label: 'Other Event' },
+  { id: 'wedding', image: 'https://source.unsplash.com/120x120/?nigerian-bride', label: 'Wedding' },
+  { id: 'engagement', image: 'https://source.unsplash.com/120x120/?african-lace-dress', label: 'Engagement / Introduction' },
+  { id: 'naming', image: 'https://source.unsplash.com/120x120/?aso-ebi', label: 'Naming Ceremony' },
+  { id: 'birthday', image: 'https://source.unsplash.com/120x120/?ankara-fashion', label: 'Birthday Celebration' },
+  { id: 'funeral', image: 'https://source.unsplash.com/120x120/?yoruba-fashion', label: 'Funeral / Remembrance' },
+  { id: 'reunion', image: 'https://source.unsplash.com/120x120/?west-african-fashion', label: 'Family Reunion' },
+  { id: 'church', image: 'https://source.unsplash.com/120x120/?kente-fashion', label: 'Church / Group Event' },
+  { id: 'other', image: 'https://source.unsplash.com/120x120/?owambe', label: 'Other Event' },
 ]
 
 const FABRIC_OPTIONS = [

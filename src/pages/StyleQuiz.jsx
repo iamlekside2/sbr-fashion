@@ -16,11 +16,11 @@ const QUESTIONS = [
     title: 'What\'s your body shape like?',
     subtitle: 'This helps us find the most flattering styles for you.',
     options: [
-      { id: 'hourglass', image: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=120&h=120&fit=crop', label: 'Hourglass', desc: 'Balanced bust and hips with a defined waist' },
-      { id: 'pear', image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=120&h=120&fit=crop', label: 'Pear', desc: 'Wider hips with a narrower upper body' },
-      { id: 'apple', image: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=120&h=120&fit=crop', label: 'Apple', desc: 'Fuller midsection with slimmer legs' },
-      { id: 'rectangle', image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=120&h=120&fit=crop', label: 'Rectangle', desc: 'Similar measurements throughout with less defined waist' },
-      { id: 'inverted', image: 'https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=120&h=120&fit=crop', label: 'Inverted Triangle', desc: 'Broader shoulders with narrower hips' },
+      { id: 'hourglass', image: 'https://source.unsplash.com/120x120/?african-print-dress', label: 'Hourglass', desc: 'Balanced bust and hips with a defined waist' },
+      { id: 'pear', image: 'https://source.unsplash.com/120x120/?west-african-fashion', label: 'Pear', desc: 'Wider hips with a narrower upper body' },
+      { id: 'apple', image: 'https://source.unsplash.com/120x120/?ankara-fashion', label: 'Apple', desc: 'Fuller midsection with slimmer legs' },
+      { id: 'rectangle', image: 'https://source.unsplash.com/120x120/?yoruba-fashion', label: 'Rectangle', desc: 'Similar measurements throughout with less defined waist' },
+      { id: 'inverted', image: 'https://source.unsplash.com/120x120/?kente-fashion', label: 'Inverted Triangle', desc: 'Broader shoulders with narrower hips' },
     ]
   },
   {
@@ -28,11 +28,11 @@ const QUESTIONS = [
     title: 'How would you describe your style?',
     subtitle: 'Pick the one that feels most like you.',
     options: [
-      { id: 'classic', image: 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=120&h=120&fit=crop', label: 'Classic & Timeless', desc: 'Clean lines, neutral palettes, structured pieces' },
-      { id: 'bold', image: 'https://images.unsplash.com/photo-1590735213920-68192a487bc2?w=120&h=120&fit=crop', label: 'Bold & Expressive', desc: 'Statement prints, vivid colours, eye-catching details' },
-      { id: 'minimalist', image: 'https://images.unsplash.com/photo-1558171813-4c088753af8f?w=120&h=120&fit=crop', label: 'Modern Minimalist', desc: 'Less is more — simple, sleek, and effortless' },
-      { id: 'eclectic', image: 'https://images.unsplash.com/photo-1523264653568-69f0e8031ec2?w=120&h=120&fit=crop', label: 'Eclectic & Creative', desc: 'Mix of patterns, textures, and unexpected combinations' },
-      { id: 'glamorous', image: 'https://images.unsplash.com/photo-1611085583191-a3b181a88401?w=120&h=120&fit=crop', label: 'Glamorous & Luxe', desc: 'Over-the-top sparkle, embellishments, and drama' },
+      { id: 'classic', image: 'https://source.unsplash.com/120x120/?yoruba-fashion', label: 'Classic & Timeless', desc: 'Clean lines, neutral palettes, structured pieces' },
+      { id: 'bold', image: 'https://source.unsplash.com/120x120/?ankara', label: 'Bold & Expressive', desc: 'Statement prints, vivid colours, eye-catching details' },
+      { id: 'minimalist', image: 'https://source.unsplash.com/120x120/?african-lace-dress', label: 'Modern Minimalist', desc: 'Less is more — simple, sleek, and effortless' },
+      { id: 'eclectic', image: 'https://source.unsplash.com/120x120/?kente-fashion', label: 'Eclectic & Creative', desc: 'Mix of patterns, textures, and unexpected combinations' },
+      { id: 'glamorous', image: 'https://source.unsplash.com/120x120/?african-accessories', label: 'Glamorous & Luxe', desc: 'Over-the-top sparkle, embellishments, and drama' },
     ]
   },
   {
@@ -40,11 +40,11 @@ const QUESTIONS = [
     title: 'Where do you dress up for the most?',
     subtitle: 'This helps us recommend pieces that fit your lifestyle.',
     options: [
-      { id: 'owambe', image: 'https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=120&h=120&fit=crop', label: 'Owambe & Parties', desc: 'Weddings, birthdays, and social celebrations' },
-      { id: 'corporate', image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=120&h=120&fit=crop', label: 'Corporate & Work', desc: 'Office, meetings, and professional settings' },
-      { id: 'church', image: 'https://images.unsplash.com/photo-1438232992991-995b7058bbb3?w=120&h=120&fit=crop', label: 'Church & Spiritual', desc: 'Worship, special services, and religious events' },
-      { id: 'casual', image: 'https://images.unsplash.com/photo-1483985988355-763728e1935b?w=120&h=120&fit=crop', label: 'Casual & Everyday', desc: 'Brunch, shopping, outings, and travel' },
-      { id: 'special', image: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=120&h=120&fit=crop', label: 'Special Events', desc: 'Galas, red carpet, once-in-a-lifetime moments' },
+      { id: 'owambe', image: 'https://source.unsplash.com/120x120/?owambe', label: 'Owambe & Parties', desc: 'Weddings, birthdays, and social celebrations' },
+      { id: 'corporate', image: 'https://source.unsplash.com/120x120/?ankara-fashion', label: 'Corporate & Work', desc: 'Office, meetings, and professional settings' },
+      { id: 'church', image: 'https://source.unsplash.com/120x120/?yoruba-fashion', label: 'Church & Spiritual', desc: 'Worship, special services, and religious events' },
+      { id: 'casual', image: 'https://source.unsplash.com/120x120/?west-african-fashion', label: 'Casual & Everyday', desc: 'Brunch, shopping, outings, and travel' },
+      { id: 'special', image: 'https://source.unsplash.com/120x120/?nigerian-bride', label: 'Special Events', desc: 'Galas, red carpet, once-in-a-lifetime moments' },
     ]
   },
   {
@@ -52,11 +52,11 @@ const QUESTIONS = [
     title: 'What colours do you love wearing?',
     subtitle: 'Your colour choices say a lot about your personality!',
     options: [
-      { id: 'earth', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&h=120&fit=crop', label: 'Earth Tones', desc: 'Browns, greens, terracotta, cream', colors: ['#8B6914','#2D5016','#CD6839','#EDE3D0'] },
-      { id: 'jewel', image: 'https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=120&h=120&fit=crop', label: 'Jewel Tones', desc: 'Emerald, sapphire, ruby, amethyst', colors: ['#046307','#1A237E','#9B111E','#6A0DAD'] },
-      { id: 'neutral', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=120&h=120&fit=crop', label: 'Neutrals', desc: 'Black, white, grey, beige, navy', colors: ['#1A1710','#F9F4EC','#666','#0A2647'] },
-      { id: 'bright', image: 'https://images.unsplash.com/photo-1525171254930-643fc658b64e?w=120&h=120&fit=crop', label: 'Bright & Vibrant', desc: 'Yellow, coral, fuchsia, electric blue', colors: ['#FFD700','#FF6B6B','#FF1493','#00BFFF'] },
-      { id: 'pastel', image: 'https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=120&h=120&fit=crop', label: 'Pastels & Soft', desc: 'Blush, lavender, mint, powder blue', colors: ['#FFB6C1','#DDA0DD','#98FB98','#B0E0E6'] },
+      { id: 'earth', image: 'https://source.unsplash.com/120x120/?african-fabric', label: 'Earth Tones', desc: 'Browns, greens, terracotta, cream', colors: ['#8B6914','#2D5016','#CD6839','#EDE3D0'] },
+      { id: 'jewel', image: 'https://source.unsplash.com/120x120/?african-lace-dress', label: 'Jewel Tones', desc: 'Emerald, sapphire, ruby, amethyst', colors: ['#046307','#1A237E','#9B111E','#6A0DAD'] },
+      { id: 'neutral', image: 'https://source.unsplash.com/120x120/?west-african-fashion', label: 'Neutrals', desc: 'Black, white, grey, beige, navy', colors: ['#1A1710','#F9F4EC','#666','#0A2647'] },
+      { id: 'bright', image: 'https://source.unsplash.com/120x120/?ankara', label: 'Bright & Vibrant', desc: 'Yellow, coral, fuchsia, electric blue', colors: ['#FFD700','#FF6B6B','#FF1493','#00BFFF'] },
+      { id: 'pastel', image: 'https://source.unsplash.com/120x120/?kente-fashion', label: 'Pastels & Soft', desc: 'Blush, lavender, mint, powder blue', colors: ['#FFB6C1','#DDA0DD','#98FB98','#B0E0E6'] },
     ]
   },
   {
@@ -64,11 +64,11 @@ const QUESTIONS = [
     title: 'What fabric makes you feel your best?',
     subtitle: 'The right fabric changes everything — trust us on this one!',
     options: [
-      { id: 'ankara', image: 'https://images.unsplash.com/photo-1590735213920-68192a487bc2?w=120&h=120&fit=crop', label: 'Ankara / African Print', desc: 'Bold, cultural, and statement-making' },
-      { id: 'lace', image: 'https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=120&h=120&fit=crop', label: 'Lace & Embroidery', desc: 'Delicate, feminine, and detailed' },
-      { id: 'silk', image: 'https://images.unsplash.com/photo-1558171813-4c088753af8f?w=120&h=120&fit=crop', label: 'Silk & Satin', desc: 'Flowing, luxurious, and glamorous' },
-      { id: 'cotton', image: 'https://images.unsplash.com/photo-1523264653568-69f0e8031ec2?w=120&h=120&fit=crop', label: 'Cotton & Linen', desc: 'Comfortable, breathable, and natural' },
-      { id: 'aso-oke', image: 'https://images.unsplash.com/photo-1611085583191-a3b181a88401?w=120&h=120&fit=crop', label: 'Aso-Oke & Traditional', desc: 'Heritage woven fabrics with prestige' },
+      { id: 'ankara', image: 'https://source.unsplash.com/120x120/?ankara', label: 'Ankara / African Print', desc: 'Bold, cultural, and statement-making' },
+      { id: 'lace', image: 'https://source.unsplash.com/120x120/?african-lace-dress', label: 'Lace & Embroidery', desc: 'Delicate, feminine, and detailed' },
+      { id: 'silk', image: 'https://source.unsplash.com/120x120/?african-fabric', label: 'Silk & Satin', desc: 'Flowing, luxurious, and glamorous' },
+      { id: 'cotton', image: 'https://source.unsplash.com/120x120/?kente-fashion', label: 'Cotton & Linen', desc: 'Comfortable, breathable, and natural' },
+      { id: 'aso-oke', image: 'https://source.unsplash.com/120x120/?yoruba-fashion', label: 'Aso-Oke & Traditional', desc: 'Heritage woven fabrics with prestige' },
     ]
   },
 ]
@@ -77,37 +77,37 @@ const QUESTIONS = [
 const PROFILES = {
   'The Regal Matriarch': {
     match: (a) => a.vibe === 'classic' && (a.fabric === 'aso-oke' || a.fabric === 'lace'),
-    image: 'https://images.unsplash.com/photo-1611085583191-a3b181a88401?w=200&h=200&fit=crop', description: 'You carry yourself with timeless elegance and cultural pride. Your style commands respect — traditional silhouettes in premium fabrics, masterfully tailored. Absolute queen energy!',
+    image: 'https://source.unsplash.com/200x200/?yoruba-fashion', description: 'You carry yourself with timeless elegance and cultural pride. Your style commands respect — traditional silhouettes in premium fabrics, masterfully tailored. Absolute queen energy!',
     categories: ['bespoke', 'aso-ebi'],
     tips: ['Invest in quality aso-oke pieces — they never go out of style', 'A well-tailored iro and buba set is your ultimate power outfit', 'Layer with a statement gele and elegant accessories to complete the look'],
   },
   'The Modern Diva': {
     match: (a) => a.vibe === 'bold' || a.vibe === 'glamorous',
-    image: 'https://images.unsplash.com/photo-1590735213920-68192a487bc2?w=200&h=200&fit=crop', description: 'You live for the spotlight! Your fashion choices are fearless, dramatic, and always memorable. You know how to make an entrance and own every room.',
+    image: 'https://source.unsplash.com/200x200/?ankara-fashion', description: 'You live for the spotlight! Your fashion choices are fearless, dramatic, and always memorable. You know how to make an entrance and own every room.',
     categories: ['ready-to-wear', 'ankara', 'accessories'],
     tips: ['Don\'t be afraid of mixing prints and textures — go bold!', 'Statement earrings and bold clutches complete your look perfectly', 'Try our custom-made service for one-of-a-kind event outfits'],
   },
   'The Effortless Professional': {
     match: (a) => a.occasion === 'corporate' || a.vibe === 'minimalist',
-    image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=200&h=200&fit=crop', description: 'You believe in the power of simplicity. Every piece in your wardrobe is intentional, versatile, and quietly luxurious. You don\'t need to shout — your style speaks for you.',
+    image: 'https://source.unsplash.com/200x200/?west-african-fashion', description: 'You believe in the power of simplicity. Every piece in your wardrobe is intentional, versatile, and quietly luxurious. You don\'t need to shout — your style speaks for you.',
     categories: ['ready-to-wear', 'bespoke'],
     tips: ['Build a capsule wardrobe of tailored ankara basics — game changer!', 'Neutral tones with one statement piece always creates impact', 'Structured blazers and pencil skirts are your go-to foundation'],
   },
   'The Creative Spirit': {
     match: (a) => a.vibe === 'eclectic' || a.colour === 'bright',
-    image: 'https://images.unsplash.com/photo-1523264653568-69f0e8031ec2?w=200&h=200&fit=crop', description: 'You see fashion as self-expression. You mix cultures, eras, and styles with effortless confidence — your looks are always uniquely, beautifully you.',
+    image: 'https://source.unsplash.com/200x200/?kente-fashion', description: 'You see fashion as self-expression. You mix cultures, eras, and styles with effortless confidence — your looks are always uniquely, beautifully you.',
     categories: ['ankara', 'accessories', 'ready-to-wear'],
     tips: ['Mix ankara with denim or leather for unexpected combos — trust me, it works!', 'Our custom design service lets your imagination run free', 'Layer accessories from different collections for a look that\'s all you'],
   },
   'The Celebration Queen': {
     match: (a) => a.occasion === 'owambe' || a.occasion === 'special',
-    image: 'https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=200&h=200&fit=crop', description: 'You dress for joy! Every outfit is a celebration of life, culture, and the moments that matter most. You\'re the life of every party and everyone knows it!',
+    image: 'https://source.unsplash.com/200x200/?owambe', description: 'You dress for joy! Every outfit is a celebration of life, culture, and the moments that matter most. You\'re the life of every party and everyone knows it!',
     categories: ['aso-ebi', 'ankara', 'bespoke'],
     tips: ['Pre-plan your outfits for upcoming events — you\'ll always be ready', 'Our aso-ebi coordination service handles group orders so you don\'t have to stress', 'Have 2-3 custom-made pieces on rotation for events — you\'ll never repeat an outfit'],
   },
   'The African Heritage Queen': {
     match: () => true, // fallback
-    image: 'https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=200&h=200&fit=crop', description: 'You honour your roots while embracing modern fashion. Your wardrobe reflects the beauty and richness of African culture with your own personal flair.',
+    image: 'https://source.unsplash.com/200x200/?african-print-dress', description: 'You honour your roots while embracing modern fashion. Your wardrobe reflects the beauty and richness of African culture with your own personal flair.',
     categories: ['ankara', 'bespoke', 'aso-ebi'],
     tips: ['Explore different African fabrics beyond ankara — there\'s a whole world out there!', 'A custom-made piece for each season keeps your wardrobe fresh and exciting', 'Mix traditional and contemporary elements to create your own signature look'],
   },
