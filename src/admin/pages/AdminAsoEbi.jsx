@@ -25,7 +25,7 @@ export default function AdminAsoEbi() {
     setLoading(false)
   }
 
-  useEffect(() => { load() }, [filter])
+  useEffect(() => { load() }, [filter]) // eslint-disable-line react-hooks/exhaustive-deps
 
   const updateStatus = async (id, status) => {
     const upd = { status }

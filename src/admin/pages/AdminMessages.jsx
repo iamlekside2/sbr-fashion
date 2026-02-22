@@ -18,7 +18,7 @@ export default function AdminMessages() {
     setLoading(false)
   }
 
-  useEffect(() => { load() }, [filter])
+  useEffect(() => { load() }, [filter]) // eslint-disable-line react-hooks/exhaustive-deps
 
   const openMessage = async (msg) => {
     setSelected(msg)

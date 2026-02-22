@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+// react-router-dom Link available if needed
 import { motion, AnimatePresence } from 'framer-motion'
 import { ShoppingBag, RefreshCw, Share2, Plus, X, Check, Sparkles } from 'lucide-react'
 import Navbar from '../components/Navbar'
@@ -8,10 +8,7 @@ import { supabase } from '../lib/supabase'
 import { useCart } from '../context/CartContext'
 import toast from 'react-hot-toast'
 
-const fadeUp = {
-  hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-}
+// Animation variants available for future use
 
 const SLOTS = [
   { id: 'main', label: 'Main Piece', desc: 'Dress, top, or primary garment', categories: ['ready-to-wear', 'bespoke', 'ankara'] },

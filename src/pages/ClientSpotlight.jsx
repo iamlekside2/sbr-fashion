@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Star, X, ChevronLeft, ChevronRight, Instagram, Quote } from 'lucide-react'
+import { X, ChevronLeft, ChevronRight, Instagram, Quote } from 'lucide-react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import { supabase } from '../lib/supabase'

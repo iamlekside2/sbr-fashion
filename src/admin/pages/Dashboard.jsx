@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { supabase } from '../../lib/supabase'
-import { Package, Calendar, Image, MessageSquare, TrendingUp, Clock, CheckCircle, AlertCircle, ShoppingCart } from 'lucide-react'
+import { Package, Calendar, Image, MessageSquare, TrendingUp, CheckCircle, AlertCircle, ShoppingCart } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 export default function Dashboard() {

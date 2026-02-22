@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { supabase } from '../../lib/supabase'
 import toast from 'react-hot-toast'
-import { Plus, Pencil, Trash2, Upload, X, Star, Eye, EyeOff } from 'lucide-react'
+import { Plus, Pencil, Trash2, Upload, X, Star } from 'lucide-react'
 
 const CATS = ['ready-to-wear','bespoke','ankara','accessories','aso-ebi']
 const inp = (extra) => ({ width:'100%', background:'#1A1710', border:'1px solid rgba(201,168,76,0.2)', color:'#F9F4EC', padding:'12px 14px', fontFamily:'Jost,sans-serif', fontSize:13, fontWeight:300, outline:'none', ...extra })

@@ -55,7 +55,7 @@ export default function LoyaltyProgramme() {
   const [showJoin, setShowJoin] = useState(false)
   const [form, setForm] = useState({ name: '', email: '', whatsapp: '' })
   const [sending, setSending] = useState(false)
-  const [contact, setContact] = useState({})
+  const [, setContact] = useState({})
 
   useEffect(() => { window.scrollTo(0, 0) }, [])
 

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { supabase } from '../../lib/supabase'
 import toast from 'react-hot-toast'
-import { MessageCircle, X, Check, Clock, XCircle, Filter } from 'lucide-react'
+import { MessageCircle, X } from 'lucide-react'
 
 const STATUS_COLORS = { pending:'#FFD600', confirmed:'#69D2A0', completed:'#C9A84C', cancelled:'#FF6B6B' }
 
@@ -19,7 +19,7 @@ export default function AdminBookings() {
     setLoading(false)
   }
 
-  useEffect(() => { load() }, [filter])
+  useEffect(() => { load() }, [filter]) // eslint-disable-line react-hooks/exhaustive-deps
 
   const updateStatus = async (id, status) => {
     const { error } = await supabase.from('bookings').update({status,notes}).eq('id',id)
