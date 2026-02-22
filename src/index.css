@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Cinzel:wght@400;500;600;700&family=Jost:wght@200;300;400;500&display=swap');
+
+:root {
+  --gold: #C9A84C;
+  --gold-light: #E8C97A;
+  --gold-pale: #F5E6C0;
+  --gold-dark: #8B6914;
+  --black: #0A0806;
+  --black2: #111009;
+  --black3: #1A1710;
+  --dark-brown: #1C1608;
+  --off-white: #F9F4EC;
+  --cream: #EDE3D0;
+  --text-muted: #8A7A5A;
+  --border: rgba(201,168,76,0.2);
+  --border-solid: #2A2010;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--black);
+  color: var(--off-white);
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+  overflow-x: hidden;
+  cursor: none;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9000;
+  opacity: 0.3;
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--black); }
+::-webkit-scrollbar-thumb { background: var(--gold-dark); }
+
+.font-display { font-family: 'Cormorant Garamond', serif; }
+.font-heading { font-family: 'Cinzel', serif; }
+
+/* ═══════════════════════════════════════════════════════════════
+   MOBILE RESPONSIVE — max-width 768px
+   ═══════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+  /* Disable custom cursor on touch devices */
+  body { cursor: auto; }
+  body::before { display: none; }
+
+  /* ── NAVBAR ── */
+  .sbr-nav { padding: 12px 20px !important; }
+  .sbr-nav-links { display: none !important; }
+  .sbr-nav-cta { display: none !important; }
+  .sbr-nav-burger { display: flex !important; }
+
+  /* ── HERO ── */
+  .sbr-hero { height: auto !important; min-height: 85vh !important; padding-bottom: 60px !important; }
+  .sbr-hero-content { padding: 0 20px !important; max-width: 100% !important; }
+  .sbr-hero-cta { flex-direction: column !important; gap: 12px !important; }
+  .sbr-hero-cta a { text-align: center; }
+  .sbr-hero-scroll { display: none !important; }
+  .sbr-hero-logo { width: 80% !important; right: -40px !important; opacity: 0.03 !important; }
+
+  /* ── ABOUT ── */
+  .sbr-about { padding: 60px 20px !important; grid-template-columns: 1fr !important; gap: 40px !important; }
+  .sbr-about-stats { grid-template-columns: repeat(3, 1fr) !important; gap: 16px !important; }
+  .sbr-about-photo-badge { width: 80px !important; height: 80px !important; bottom: -10px !important; left: -10px !important; }
+  .sbr-about-photo-badge .badge-title { font-size: 20px !important; }
+  .sbr-about-photo-badge .badge-sub { font-size: 6px !important; }
+
+  /* ── FEATURED / COLLECTIONS GRID ── */
+  .sbr-featured { padding: 60px 20px !important; }
+  .sbr-featured-header { flex-direction: column !important; align-items: flex-start !important; gap: 16px !important; }
+  .sbr-featured-grid { grid-template-columns: 1fr !important; }
+  .sbr-featured-grid > a:first-child { grid-row: auto !important; aspect-ratio: 3/4 !important; }
+  .sbr-products-grid { grid-template-columns: 1fr 1fr !important; gap: 12px !important; }
+
+  /* ── SERVICES (Home) ── */
+  .sbr-services-home { padding: 60px 20px !important; }
+  .sbr-services-grid { grid-template-columns: 1fr 1fr !important; }
+
+  /* ── PROCESS ── */
+  .sbr-process { padding: 60px 20px !important; }
+  .sbr-process-grid { grid-template-columns: 1fr 1fr !important; gap: 32px !important; }
+  .sbr-process-line { display: none !important; }
+
+  /* ── TESTIMONIALS ── */
+  .sbr-testimonials { padding: 60px 20px !important; }
+  .sbr-testimonials-grid { grid-template-columns: 1fr !important; gap: 20px !important; }
+
+  /* ── CTA BANNER ── */
+  .sbr-cta-banner { padding: 60px 20px !important; }
+
+  /* ── FOOTER ── */
+  .sbr-footer { padding: 48px 20px 32px !important; }
+  .sbr-footer-grid { grid-template-columns: 1fr 1fr !important; gap: 32px !important; }
+  .sbr-footer-bottom { flex-direction: column !important; gap: 8px !important; text-align: center; }
+
+  /* ── PAGE CONTAINERS (Collections, Lookbook, Services, etc.) ── */
+  .sbr-page-pad { padding: 0 20px !important; }
+
+  /* ── COLLECTION DETAIL ── */
+  .sbr-detail-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
+  .sbr-detail-cta { flex-direction: column !important; }
+  .sbr-detail-cta a { text-align: center; }
+  .sbr-related-grid { grid-template-columns: 1fr 1fr !important; gap: 12px !important; }
+
+  /* ── CONTACT ── */
+  .sbr-contact-grid { grid-template-columns: 1fr !important; }
+  .sbr-form-row { grid-template-columns: 1fr !important; }
+  .sbr-form-box { padding: 24px !important; }
+
+  /* ── BOOKING ── */
+  .sbr-booking-box { padding: 24px !important; }
+
+  /* ── SERVICES PAGE ── */
+  .sbr-service-row { grid-template-columns: 1fr !important; gap: 16px !important; }
+  .sbr-service-row > div:first-child { font-size: 28px !important; }
+  .sbr-service-meta { text-align: left !important; min-width: auto !important; display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+
+  /* ── LOOKBOOK ── */
+  .sbr-lookbook-masonry { columns: 2 !important; }
+  .sbr-lookbook-lightbox img { max-width: 95vw !important; max-height: 75vh !important; }
+
+  /* ── COLLECTIONS PAGE ── */
+  .sbr-filter-bar { flex-wrap: wrap !important; }
+  .sbr-collection-grid { grid-template-columns: 1fr 1fr !important; gap: 12px !important; }
+
+  /* ── BESPOKE CONFIGURATOR ── */
+  .sbr-bespoke-cards { grid-template-columns: 1fr 1fr !important; }
+  .sbr-bespoke-measures { grid-template-columns: 1fr 1fr !important; }
+  .sbr-bespoke-progress { gap: 0 !important; overflow-x: auto; justify-content: flex-start !important; padding-bottom: 8px; }
+
+  /* ── CART ── */
+  .sbr-cart-layout { grid-template-columns: 1fr !important; gap: 32px !important; }
+  .sbr-cart-summary { position: static !important; }
+  .sbr-cart-header { display: none !important; }
+  .sbr-cart-item { grid-template-columns: 1fr !important; gap: 16px !important; }
+
+  /* ── DRESS MY OCCASION ── */
+  .sbr-occasion-grid { grid-template-columns: 1fr 1fr !important; }
+  .sbr-occasion-products { grid-template-columns: 1fr 1fr !important; }
+  .sbr-occasion-ctas { grid-template-columns: 1fr !important; }
+
+  /* ── ASO-EBI COORDINATOR ── */
+  .sbr-aso-event-grid { grid-template-columns: 1fr 1fr !important; }
+  .sbr-aso-fabric-grid { grid-template-columns: 1fr 1fr !important; }
+  .sbr-aso-colour-grid { grid-template-columns: 1fr 1fr !important; }
+  .sbr-aso-guest-row { grid-template-columns: 1fr !important; }
+  .sbr-aso-contact-grid { grid-template-columns: 1fr !important; }
+
+  /* ── STYLE QUIZ ── */
+  .sbr-quiz-products { grid-template-columns: 1fr 1fr !important; }
+  .sbr-quiz-ctas { grid-template-columns: 1fr !important; }
+
+  /* ── WISHLIST ── */
+  .sbr-wishlist-grid { grid-template-columns: 1fr 1fr !important; }
+
+  /* ── OUTFIT BUILDER ── */
+  .sbr-outfit-layout { grid-template-columns: 1fr !important; }
+  .sbr-outfit-summary { position: static !important; }
+  .sbr-outfit-picker { grid-template-columns: 1fr 1fr !important; }
+
+  /* ── FABRIC SWATCHES ── */
+  .sbr-swatch-grid { grid-template-columns: 1fr 1fr !important; }
+  .sbr-swatch-filters { justify-content: flex-start !important; overflow-x: auto; }
+
+  /* ── CLIENT SPOTLIGHT ── */
+  .sbr-spotlight-grid { grid-template-columns: 1fr !important; }
+  .sbr-spotlight-detail { grid-template-columns: 1fr !important; }
+
+  /* ── LOYALTY PROGRAMME ── */
+  .sbr-loyalty-tiers { grid-template-columns: 1fr 1fr !important; }
+  .sbr-loyalty-steps { grid-template-columns: 1fr 1fr !important; }
+
+  /* ── INTERACTIVE FEATURES (Home) ── */
+  .sbr-interactive { padding: 60px 20px !important; }
+  .sbr-interactive-grid { grid-template-columns: 1fr 1fr !important; }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   SMALL PHONE — max-width 480px
+   ═══════════════════════════════════════════════════════════════ */
+@media (max-width: 480px) {
+  .sbr-services-grid { grid-template-columns: 1fr !important; }
+  .sbr-process-grid { grid-template-columns: 1fr !important; }
+  .sbr-products-grid { grid-template-columns: 1fr !important; }
+  .sbr-collection-grid { grid-template-columns: 1fr !important; }
+  .sbr-related-grid { grid-template-columns: 1fr !important; }
+  .sbr-footer-grid { grid-template-columns: 1fr !important; }
+  .sbr-lookbook-masonry { columns: 1 !important; }
+  .sbr-about-stats { grid-template-columns: repeat(3, 1fr) !important; }
+  .sbr-bespoke-cards { grid-template-columns: 1fr !important; }
+  .sbr-bespoke-measures { grid-template-columns: 1fr !important; }
+  .sbr-occasion-grid { grid-template-columns: 1fr !important; }
+  .sbr-occasion-products { grid-template-columns: 1fr !important; }
+  .sbr-wishlist-grid { grid-template-columns: 1fr !important; }
+  .sbr-loyalty-tiers { grid-template-columns: 1fr !important; }
+  .sbr-loyalty-steps { grid-template-columns: 1fr !important; }
+  .sbr-interactive-grid { grid-template-columns: 1fr !important; }
+}
