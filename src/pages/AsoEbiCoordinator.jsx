@@ -14,14 +14,14 @@ const fadeUp = {
 }
 
 const EVENT_TYPES = [
-  { id: 'wedding', image: 'https://source.unsplash.com/120x120/?nigerian-bride', label: 'Wedding' },
-  { id: 'engagement', image: 'https://source.unsplash.com/120x120/?african-lace-dress', label: 'Engagement / Introduction' },
-  { id: 'naming', image: 'https://source.unsplash.com/120x120/?aso-ebi', label: 'Naming Ceremony' },
-  { id: 'birthday', image: 'https://source.unsplash.com/120x120/?ankara-fashion', label: 'Birthday Celebration' },
-  { id: 'funeral', image: 'https://source.unsplash.com/120x120/?yoruba-fashion', label: 'Funeral / Remembrance' },
-  { id: 'reunion', image: 'https://source.unsplash.com/120x120/?west-african-fashion', label: 'Family Reunion' },
-  { id: 'church', image: 'https://source.unsplash.com/120x120/?kente-fashion', label: 'Church / Group Event' },
-  { id: 'other', image: 'https://source.unsplash.com/120x120/?owambe', label: 'Other Event' },
+  { id: 'wedding', image: 'https://images.unsplash.com/photo-1661332517932-2d441bfb2994?w=120&h=120&fit=crop', label: 'Wedding' },
+  { id: 'engagement', image: 'https://images.unsplash.com/photo-1753549839764-c7f0b02bd693?w=120&h=120&fit=crop', label: 'Engagement / Introduction' },
+  { id: 'naming', image: 'https://images.unsplash.com/photo-1752343781467-bf8f7e68d8d2?w=120&h=120&fit=crop', label: 'Naming Ceremony' },
+  { id: 'birthday', image: 'https://images.unsplash.com/photo-1680878903102-92692799ef36?w=120&h=120&fit=crop', label: 'Birthday Celebration' },
+  { id: 'funeral', image: 'https://images.unsplash.com/photo-1660839244478-5fe816485e1b?w=120&h=120&fit=crop', label: 'Funeral / Remembrance' },
+  { id: 'reunion', image: 'https://images.unsplash.com/photo-1568805778734-f0a5a77d7272?w=120&h=120&fit=crop', label: 'Family Reunion' },
+  { id: 'church', image: 'https://images.unsplash.com/photo-1552162864-987ac51d1177?w=120&h=120&fit=crop', label: 'Church / Group Event' },
+  { id: 'other', image: 'https://images.unsplash.com/photo-1752343809373-0600ccb3bcd2?w=120&h=120&fit=crop', label: 'Other Event' },
 ]
 
 const FABRIC_OPTIONS = [

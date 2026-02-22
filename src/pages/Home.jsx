@@ -67,18 +67,18 @@ export default function Home() {
 
   // Fallback category cards shown when no featured products exist yet
   const collections = [
-    { image: "https://source.unsplash.com/800x600/?ankara-fashion", name: "Ankara Ready-to-Wear", cat: "Signature Line", count: "From ₦45,000", pattern: "repeating-conic-gradient(#C9A84C22 0% 25%, transparent 0% 50%)", bg: "linear-gradient(135deg,#1A0F00,#2A1800)", href: "/collections?cat=ankara" },
-    { image: "https://source.unsplash.com/800x600/?yoruba-fashion", name: "Custom-Made Pieces", cat: "Made to Order", count: "Made to Order", pattern: "radial-gradient(circle at 50% 50%, #C9A84C22 2px, transparent 2px)", bg: "linear-gradient(135deg,#0F0A00,#1F1400)", href: "/collections?cat=bespoke" },
-    { image: "https://source.unsplash.com/800x600/?african-accessories", name: "Jewellery & Pieces", cat: "Accessories", count: "From ₦12,000", pattern: "repeating-linear-gradient(60deg,#C9A84C11 0,#C9A84C11 1px,transparent 0,transparent 10px)", bg: "linear-gradient(135deg,#120800,#221200)", href: "/collections?cat=accessories" },
-    { image: "https://source.unsplash.com/800x600/?kente-fashion", name: "African Heritage Edit", cat: "New Season", count: "From ₦65,000", pattern: "repeating-linear-gradient(45deg,#C9A84C11 0,#C9A84C11 1px,transparent 0,transparent 10px)", bg: "linear-gradient(135deg,#0A0A00,#1A1600)", href: "/collections?cat=heritage" },
-    { image: "https://source.unsplash.com/800x600/?aso-ebi", name: "Aso-Ebi Styles", cat: "Occasion Wear", count: "Group Orders Welcome", pattern: "radial-gradient(circle, #C9A84C11 1px, transparent 1px)", bg: "linear-gradient(135deg,#100800,#201000)", href: "/collections?cat=aso-ebi" },
+    { image: "https://images.unsplash.com/photo-1680878903102-92692799ef36?w=800&h=600&fit=crop", name: "Ankara Ready-to-Wear", cat: "Signature Line", count: "From ₦45,000", pattern: "repeating-conic-gradient(#C9A84C22 0% 25%, transparent 0% 50%)", bg: "linear-gradient(135deg,#1A0F00,#2A1800)", href: "/collections?cat=ankara" },
+    { image: "https://images.unsplash.com/photo-1673201229733-69d19c5c4a87?w=800&h=600&fit=crop", name: "Custom-Made Pieces", cat: "Made to Order", count: "Made to Order", pattern: "radial-gradient(circle at 50% 50%, #C9A84C22 2px, transparent 2px)", bg: "linear-gradient(135deg,#0F0A00,#1F1400)", href: "/collections?cat=bespoke" },
+    { image: "https://images.unsplash.com/photo-1757140448528-332c4fa2a8a6?w=800&h=600&fit=crop", name: "Jewellery & Pieces", cat: "Accessories", count: "From ₦12,000", pattern: "repeating-linear-gradient(60deg,#C9A84C11 0,#C9A84C11 1px,transparent 0,transparent 10px)", bg: "linear-gradient(135deg,#120800,#221200)", href: "/collections?cat=accessories" },
+    { image: "https://images.unsplash.com/photo-1552162864-987ac51d1177?w=800&h=600&fit=crop", name: "African Heritage Edit", cat: "New Season", count: "From ₦65,000", pattern: "repeating-linear-gradient(45deg,#C9A84C11 0,#C9A84C11 1px,transparent 0,transparent 10px)", bg: "linear-gradient(135deg,#0A0A00,#1A1600)", href: "/collections?cat=heritage" },
+    { image: "https://images.unsplash.com/photo-1661332517932-2d441bfb2994?w=800&h=600&fit=crop", name: "Aso-Ebi Styles", cat: "Occasion Wear", count: "Group Orders Welcome", pattern: "radial-gradient(circle, #C9A84C11 1px, transparent 1px)", bg: "linear-gradient(135deg,#100800,#201000)", href: "/collections?cat=aso-ebi" },
   ];
 
   const services = [
-    { image: "https://source.unsplash.com/400x300/?african-lace-dress", title: "Custom-Made Outfits", desc: "We'll make it exactly how you want it — your size, your style, your vision. Every stitch, just for you.", href: "/book" },
-    { image: "https://source.unsplash.com/400x300/?west-african-fashion", title: "Style Advice", desc: "Sit down with Ruth and figure out what works for your body, your lifestyle, and your budget.", href: "/book" },
-    { image: "https://source.unsplash.com/400x300/?ankara", title: "Ankara & Print Ready-to-Wear", desc: "Ready-made ankara and print pieces you can grab and go. Looking fresh has never been easier.", href: "/collections" },
-    { image: "https://source.unsplash.com/400x300/?owambe", title: "Owambe & Aso-Ebi", desc: "Wedding, naming, birthday, or party — we'll make sure you and your crew show up correct.", href: "/book" },
+    { image: "https://images.unsplash.com/photo-1753549839764-c7f0b02bd693?w=400&h=300&fit=crop", title: "Custom-Made Outfits", desc: "We'll make it exactly how you want it — your size, your style, your vision. Every stitch, just for you.", href: "/book" },
+    { image: "https://images.unsplash.com/photo-1568805778734-f0a5a77d7272?w=400&h=300&fit=crop", title: "Style Advice", desc: "Sit down with Ruth and figure out what works for your body, your lifestyle, and your budget.", href: "/book" },
+    { image: "https://images.unsplash.com/photo-1760907949955-294e28bf058d?w=400&h=300&fit=crop", title: "Ankara & Print Ready-to-Wear", desc: "Ready-made ankara and print pieces you can grab and go. Looking fresh has never been easier.", href: "/collections" },
+    { image: "https://images.unsplash.com/photo-1752343809373-0600ccb3bcd2?w=400&h=300&fit=crop", title: "Owambe & Aso-Ebi", desc: "Wedding, naming, birthday, or party — we'll make sure you and your crew show up correct.", href: "/book" },
   ];
 
   const interactiveFeatures = [
